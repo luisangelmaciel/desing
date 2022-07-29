@@ -64,7 +64,7 @@
         $('.btn-tweet').hide();
         return $('.btn-force').on('click', function() {
             generateQuote();
-            $('.twitter').attr('href', 'https://twitter.com/intent/tweet?text=' + speaker + '%20said,%20"' + said + '"%20%23DragonBall%20https://goo.gl/MOxWg1').attr('target', '_blank');
+            $('.twitter').attr('href', 'https://twitter.com/intent/tweet?text=' + speaker + '%20said,%20"' + said + '"%20%23DragonBall%20https://www.luisangelmaciel.one').attr('target', '_blank');
             return $('.btn-tweet').show();
         });
     });
