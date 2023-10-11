@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>h8 - Neon Tex </title>
+    <title>.neon - Neon Tex </title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
@@ -15,44 +15,123 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh
-        }
-        
-        h8 {
+        }               
+
+        .hide {display:none}
+        .neon {
             color: #484848;
-            font-size: 50px;
+            font-size: 60px;
             font-weight: bold;
             font-family: monospace;
             letter-spacing: 7px;
             cursor: pointer
         }
+
+       
         
-        h8 span {
+        .neon span {
             transition: .5s linear
         }
         
-        h8:hover span:nth-child(1) {
+        .neon:hover span:nth-child(1) {
             margin-right: 5px
         }
         
-        h8:hover span:nth-child(1):after {
+        .neon:hover span:nth-child(1):after {
             content: "'";
         }
         
-        h8:hover span:nth-child(2) {
+        .neon:hover span:nth-child(2) {
             margin-left: 30px
         }
         
-        h8:hover span {
+        .neon:hover span {
             color: #fff;
             text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
         }
         /*made with ❤, by hihello.monster */
+
+         /*small*/@media (max-width:600px) {
+            .neon {
+            color: #484848;
+            font-size: 30px;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 6.5px;}
+
+            .neon:hover {
+            color: #2b2b2b;
+            font-size: 31px;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 6px;
+            cursor: pointer}
+
+            .neon span {
+            transition: .5s linear;
+            font-size: 40px;
+            }
+            
+            .neon:hover span:nth-child(1) {
+                margin-right: 5px
+            }
+            
+            .neon:hover span:nth-child(1):after {
+                content: "'"; font-size: 41px;
+            }
+            
+            .neon:hover span:nth-child(2) {
+                margin-left: 30px
+            }
+            
+            .neon:hover span {
+                color: #fff;
+                text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+            }
+
+        }
+        /*large*/@media (min-width:993px) {
+            .neon {
+            color: #484848;
+            font-size: 90px;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 7px;
+            cursor: pointer
+        }  
+        .neon:hover {
+            color: #2b2b2b;
+            font-size: 91px;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 7.5px;
+            cursor: pointer                        
+        }          
+        }
+        /*medium */@media (max-width:992px) and (min-width:601px) {
+            .neon {
+            color: #484848;
+            font-size: 70px;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 7px;}
+            .neon:hover {
+            color: #2b2b2b;
+            font-size: 71px;
+            font-weight: bold;
+            font-family: monospace;
+            letter-spacing: 6px;
+            cursor: pointer                        
+        }
+        }
     </style>
 
 </head>
 
 <body>
-    <h8><span>HI</span>hello<span>MONSTER</span></h8>
+    <h1 class="neon hide " ><span>HI</span>hello<span>MONSTER</span></h1>
+    <h1 class="neon  hide" ><span>DISEÑO</span>de<span>WEBAPPS</span></h1>
+    <h1 class="neon " ><span>VENTA</span>DE<span>ORO</span></h1>
 </body>
 
 </html>
