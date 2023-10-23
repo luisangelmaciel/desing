@@ -1,111 +1,470 @@
-<div id="placaName">
-    <style>
-        @import url(https://fonts.googleapis.com/css?family=Raleway:500);
-        @import url(https://fonts.googleapis.com/css?family=Teko:700);
-        .placaName {
-            font-family: 'Raleway', Arial, sans-serif;
-            position: relative;
-            display: inline-block;
-            color: #bdbdbd;
-            margin: 60px 20px;
-            max-width: 285px;
-            width: 100%;
-            text-align: center;
-            font-size: 16px;
-            -webkit-box-sizing: content-box;
-            box-sizing: content-box;
-            line-height: 30px;
-        }
-        
-        .placaName h1,
-        .placaName h2 {
-            margin: 0;
-            text-transform: uppercase;
-        }
-        
-        .placaName h1 {
-            font-family: 'Teko', Arial, sans-serif;
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Generador de logo con tu nombre y año de nacimiento</title>
+		<meta name="description" content="Generador de logo con tu nombre y año de nacimiento">
+        <style>
+*, *:before, *:after {-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;}  
+html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
+html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%; scroll-behavior: smooth;}
+body{margin:0}
+article,footer{display:block}
+a{background-color:transparent}a:active,a:hover{outline-width:0}
+img{border-style:none}
+::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
+html{overflow-x:hidden}
+@font-face {
+    font-family: Inter, 'Oswald';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Oswald'), url(Oswald.woff2) format('woff2');
+    font-display: swap;
+}
+
+body.active { overflow: hidden; }
+:focus-visible { outline-offset: 4px; }
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background-color: hsl(0, 0%, 98%); }
+::-webkit-scrollbar-thumb { background-color: hsl(0, 0%, 80%); }
+::-webkit-scrollbar-thumb:hover { background-color: hsl(0, 0%, 70%); }
+
+
+.sr-only {clip: rect(0, 0, 0, 0);border-width:0;height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;white-space: nowrap;width: 1px;}
+
+
+
+            /* latin */
+            @font-face {
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 500;
+            src: url(https://fonts.gstatic.com/s/raleway/v29/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvoorCIPrE.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap
+            }
+    
+            /* latin */
+            @font-face {
+            font-family: 'Teko';
+            font-style: normal;
             font-weight: 700;
-            font-size: 54px;
-            padding: 0;
-            text-align: center;
-            margin: 0;
-            line-height: 27px;
-        }
-        
-        .placaName h2 {
-            background-color: #bdbdbd;
-            color: #212121;
-            display: inline-block;
-            font-size: 0.6em;
-            font-weight: 700;
-            line-height: 18px;
-            padding: 0 20px;
-            position: relative;
-        }
-        
-        .placaName h2:before,
-        .placaName h2:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 0;
-            top: 2px;
-            border-width: 9px 5px;
-            border-style: solid;
-            opacity: 0.8;
-        }
-        
-        .placaName h2:before {
-            right: 100%;
-            border-color: #bdbdbd #bdbdbd #bdbdbd transparent;
-        }
-        
-        .placaName h2:after {
-            left: 100%;
-            border-color: #bdbdbd transparent #bdbdbd #bdbdbd;
-        }
-        
-        .placaName p {
-            margin: 0;
-            display: inline-block;
-            position: relative;
-            text-transform: uppercase;
-        }
-        
-        .placaName p:before,
-        .placaName p:after {
-            position: absolute;
-            height: 2px;
-            content: '';
-            width: 30px;
-            top: 50%;
-            border-top: 2px solid #bdbdbd;
-            border-bottom: 2px solid #bdbdbd;
-            -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-            line-height: 20px;
-        }
-        
-        .placaName p:before {
-            left: -35px;
-        }
-        
-        .placaName p:after {
-            right: -35px;
-        }
-        
-        .placaName i {
-            font-size: 22px;
-            line-height: 36px;
-        }
-        /* Demo purposes only */
-        
-        body {
-            background-color: #212121;
-            text-align: center;
-        }
-    </style>
+            src: url(https://fonts.gstatic.com/s/teko/v20/LYjYdG7kmE0gV69VVPPdFl06VN_wHIS11zM.woff2) format('woff2');
+            unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+            font-display: swap
+            }
+            .placaName {
+                font-family: 'Raleway', Arial, sans-serif;
+                position: relative;
+                display: inline-block;
+                color: #bdbdbd;
+                margin: 60px 20px;
+                max-width: 285px;
+                width: 100%;
+                text-align: center;
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+                line-height: 30px;
+            }
+            
+            .placaName h1,
+            .placaName h2 {
+                margin: 0;
+                text-transform: uppercase;
+            }
+            
+            .placaName h1 {
+                font-family: 'Teko', Arial, sans-serif;
+                font-weight: 700;
+                font-size: 5em;
+                padding: 0;
+                text-align: center;
+                margin: 0;
+                line-height: 27px;
+            }
+            
+            .placaName h2 {
+                background-color: #bdbdbd;
+                color: #212121;
+                display: inline-block;
+                font-size: 0.6em;
+                font-weight: 700;
+                line-height: 18px;
+                padding: 0 20px;
+                position: relative;
+            }
+            
+            .placaName h2:before,
+            .placaName h2:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 2px;
+                border-width: 9px 5px;
+                border-style: solid;
+                opacity: 0.8;
+            }
+            
+            .placaName h2:before {
+                right: 100%;
+                border-color: #bdbdbd #bdbdbd #bdbdbd transparent;
+            }
+            
+            .placaName h2:after {
+                left: 100%;
+                border-color: #bdbdbd transparent #bdbdbd #bdbdbd;
+            }
+            
+            .placaName p {
+                margin: 0;
+                display: inline-block;
+                position: relative;
+                text-transform: uppercase;
+            }
+            
+            .placaName p:before,
+            .placaName p:after {
+                position: absolute;
+                height: 2px;
+                content: '';
+                width: 30px;
+                top: 50%;
+                border-top: 2px solid #bdbdbd;
+                border-bottom: 2px solid #bdbdbd;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                line-height: 20px;
+            }
+            
+            .placaName p:before {
+                left: -35px;
+            }
+            
+            .placaName p:after {
+                right: -35px;
+            }
+            
+            .placaName i {
+                font-size: 22px;
+                line-height: 36px;
+            }
+            
+          
+
+            /*small*/
+@media (max-width:600px) {
+    .hide-small {display: none!important}
+    .placaName {
+                font-family: 'Raleway', Arial, sans-serif;
+                position: relative;
+                display: inline-block;
+                color: #bdbdbd;
+                margin: 60px 20px;
+                max-width: 600px;
+                width: 100%;
+                text-align: center;
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+                line-height: 30px;
+            }
+            
+            .placaName h1,
+            .placaName h2 {
+                margin: 0;
+                text-transform: uppercase;
+            }
+            
+            .placaName h1 {
+                font-family: 'Teko', Arial, sans-serif;
+                font-weight: 700;
+                font-size: 5em;
+                padding: 0;
+                text-align: center;
+                margin: 0;
+                line-height:50px;
+            }
+            
+            .placaName h2 {
+                background-color: #bdbdbd;
+                font-size: 5em;
+                color: #a57676;
+                display: inline-block;                
+                font-weight: 700;
+                line-height: 18px;
+                padding: 0 20px;
+                position: relative;
+            }
+            
+            .placaName h2:before,
+            .placaName h2:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 2px;
+                border-width: 9px 5px;
+                border-style: solid;
+                opacity: 0.8;
+            }
+            
+            .placaName h2:before {
+                right: 100%;
+                border-color: #bdbdbd #bdbdbd #bdbdbd transparent;
+            }
+            
+            .placaName h2:after {
+                left: 100%;
+                border-color: #bdbdbd transparent #bdbdbd #bdbdbd;
+            }
+            
+            .placaName p {
+                margin: 0;
+                display: inline-block;
+                position: relative;
+                text-transform: uppercase;
+            }
+            
+            .placaName p:before,
+            .placaName p:after {
+                position: absolute;
+                height: 2px;
+                content: '';
+                width: 30px;
+                top: 50%;
+                border-top: 2px solid #bdbdbd;
+                border-bottom: 2px solid #bdbdbd;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                line-height: 20px;
+            }
+            
+            .placaName p:before {
+                left: -35px;
+            }
+            
+            .placaName p:after {
+                right: -35px;
+            }
+            
+            .placaName i {
+                font-size: 22px;
+                line-height: 36px;
+            }
+
+}
+/*large*/
+@media (min-width:993px) {
+    .hide-large { display: none!important}}
+    .placaName {
+                font-family: 'Raleway', Arial, sans-serif;
+                position: relative;
+                display: inline-block;
+                color: #bdbdbd;
+                margin: 60px 20px;
+                max-width: 993px;
+                width: 100%;
+                text-align: center;
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+                line-height: 30px;
+            }
+            
+            .placaName h1,
+            .placaName h2 {
+                margin: 0;
+                text-transform: uppercase;
+            }
+            
+            .placaName h1 {
+                font-family: 'Teko', Arial, sans-serif;
+                font-weight: 700;
+                font-size: 5em;
+                padding: 0;
+                text-align: center;
+                margin: 0;
+                line-height:50px;
+            }
+            
+            .placaName h2 {
+                background-color: #bdbdbd;
+                color: #212121;
+                display: inline-block;
+                font-size: 0.6em;
+                font-weight: 700;
+                line-height: 18px;
+                padding: 0 20px;
+                position: relative;
+            }
+            
+            .placaName h2:before,
+            .placaName h2:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 2px;
+                border-width: 9px 5px;
+                border-style: solid;
+                opacity: 0.8;
+            }
+            
+            .placaName h2:before {
+                right: 100%;
+                border-color: #bdbdbd #bdbdbd #bdbdbd transparent;
+            }
+            
+            .placaName h2:after {
+                left: 100%;
+                border-color: #bdbdbd transparent #bdbdbd #bdbdbd;
+            }
+            
+            .placaName p {
+                margin: 0;
+                display: inline-block;
+                position: relative;
+                text-transform: uppercase;
+            }
+            
+            .placaName p:before,
+            .placaName p:after {
+                position: absolute;
+                height: 2px;
+                content: '';
+                width: 30px;
+                top: 50%;
+                border-top: 2px solid #bdbdbd;
+                border-bottom: 2px solid #bdbdbd;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                line-height: 20px;
+            }
+            
+            .placaName p:before {
+                left: -35px;
+            }
+            
+            .placaName p:after {
+                right: -35px;
+            }
+            
+            .placaName i {
+                font-size: 22px;
+                line-height: 36px;
+            }
+
+}
+/*medium */
+@media (max-width:992px) and (min-width:601px) {
+    .hide-medium {  display: none!important}
+    .placaName {
+                font-family: 'Raleway', Arial, sans-serif;
+                position: relative;
+                display: inline-block;
+                color: #bdbdbd;
+                margin: 60px 20px;
+                max-width: 992px;
+                min-width:601px;
+                width: 100%;
+                text-align: center;
+                font-size: 3em;
+                -webkit-box-sizing: content-box;
+                box-sizing: content-box;
+                line-height: 30px;
+            }
+            
+            .placaName h1,
+            .placaName h2 {
+                margin: 0;
+                text-transform: uppercase;
+            }
+            
+            .placaName h1 {
+                font-family: 'Teko', Arial, sans-serif;
+                font-weight: 700;
+                font-size: 4em;
+                padding: 0;
+                text-align: center;
+                margin: 0;
+                line-height:50px;
+            }
+            
+            .placaName h2 {
+                background-color: #bdbdbd;
+                color: #212121;
+                display: inline-block;
+                font-size: 0.6em;
+                font-weight: 700;
+                line-height: 18px;
+                padding: 0 20px;
+                position: relative;
+            }
+            
+            .placaName h2:before,
+            .placaName h2:after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 0;
+                top: 2px;
+                border-width: 9px 5px;
+                border-style: solid;
+                opacity: 0.8;
+            }
+            
+            .placaName h2:before {
+                right: 100%;
+                border-color: #bdbdbd #bdbdbd #bdbdbd transparent;
+            }
+            
+            .placaName h2:after {
+                left: 100%;
+                border-color: #bdbdbd transparent #bdbdbd #bdbdbd;
+            }
+            
+            .placaName p {
+                margin: 0;
+                display: inline-block;
+                position: relative;
+                text-transform: uppercase;
+            }
+            
+            .placaName p:before,
+            .placaName p:after {
+                position: absolute;
+                height: 2px;
+                content: '';
+                width: 30px;
+                top: 50%;
+                border-top: 2px solid #bdbdbd;
+                border-bottom: 2px solid #bdbdbd;
+                -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+                line-height: 20px;
+            }
+            
+            .placaName p:before {
+                left: -35px;
+            }
+            
+            .placaName p:after {
+                right: -35px;
+            }
+            
+            .placaName i {
+                font-size: 22px;
+                line-height: 36px;
+            }
+
+}
+
+
+        </style>
+
+    </head>
+    <body style=" background-color: #212121; text-align: center;"><div id="placaName">
+ 
 
     <div class="placaName">
         <h1>Luis Angel</h1>
@@ -114,4 +473,7 @@
     </div>
 
     <!-- partial -->
-</div>
+        </div>
+
+</body>
+</html>
