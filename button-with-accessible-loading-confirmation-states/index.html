@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Button with accessible loading confirmation states</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<style>
+
+
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.25em 0.75em;
+}
+
+.save-button svg {
+  display: block;
+  width: 1em;
+}
+
+.save-button .icon {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.save-button.loading .spinner {
+  display: block;
+  animation: rotate 2s linear infinite;
+}
+
+.save-button.saved .check {
+  display: block;
+}
+</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<h1>Loading/Confirmation button</h1>
+
+<p>Quick example of an accessible implementation of a button that has loading and confirmation states after it is activated.</p>
+
+<h2>Example</h2>
+<label for="message">Message</label>
+<textarea id="message"></textarea>
+
+<div id="save-status" class="visuallyHidden" aria-live="polite"></div>
+<button class="save-button">
+  <span>Save</span>
+  <svg class="icon spinner" viewBox="0 0 32 32">
+    <path d="M16 32c-4.274 0-8.292-1.664-11.314-4.686s-4.686-7.040-4.686-11.314c0-3.026 0.849-5.973 2.456-8.522 1.563-2.478 3.771-4.48 6.386-5.791l1.344 2.682c-2.126 1.065-3.922 2.693-5.192 4.708-1.305 2.069-1.994 4.462-1.994 6.922 0 7.168 5.832 13 13 13s13-5.832 13-13c0-2.459-0.69-4.853-1.994-6.922-1.271-2.015-3.066-3.643-5.192-4.708l1.344-2.682c2.615 1.31 4.824 3.313 6.386 5.791 1.607 2.549 2.456 5.495 2.456 8.522 0 4.274-1.664 8.292-4.686 11.314s-7.040 4.686-11.314 4.686z"></path>
+  </svg>
+  <svg class="icon check" viewBox="0 0 32 32">
+    <path d="M27 4l-15 15-7-7-5 5 12 12 20-20z"></path>
+  </svg>
+</button>
+
+<h2>Accessibility approach</h2>
+<ul>
+  <li><strong>An icon rather than a toast:</strong> toasts are easy to miss if using a screen magnifier, or if the user has something that causes tunnel vision or tunnel focus. A loading/check icon on the button shows up right where visual and keyboard focus already exists.</li>
+  <li><strong>A visually hidden status message:</strong> it would also be possible to give the icons accessible names, and rely on the name change on the focused element. The issue with that approach is that name changes are not consistently read by screen readers, and it's also possible that the user has moved focus before the confirmation state. An accessible name change paired with a live status message would result in double announcements. The conclusion was to rely only on a status message, and treate the icons as visual-only.</li>
+  <li><strong>Use aria-disabled instead of disabled:</strong> if the button switched to <code>disabled</code> after activation, focus would be lost. Using aria-disabled allows focus to remain on the button after it is pressed.</li>
+  <li><strong>Loading timeout:</strong> there is a 200ms timeout on the loading announcement that is cleared if the saved state occurs before the 200ms is up. That prevents the loading state from being announced if it is so brief that the extra announcement would be unnecessary.</li>
+</ul>
+
+  <script  src="./saved-successfully.js"></script>
+
+</body>
+</html>

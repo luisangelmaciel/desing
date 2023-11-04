@@ -1,0 +1,59 @@
+body {
+  padding: 1em 3em;
+}
+
+.visuallyHidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+}
+
+label {
+  display: block;
+}
+
+textarea {
+  display: block;
+  font-family: inherit;
+  padding: 0.5em;
+  margin: 0.5em 0;
+}
+
+.save-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.25em 0.75em;
+}
+
+.save-button svg {
+  display: block;
+  width: 1em;
+}
+
+.save-button .icon {
+  display: none;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.save-button.loading .spinner {
+  display: block;
+  animation: rotate 2s linear infinite;
+}
+
+.save-button.saved .check {
+  display: block;
+}

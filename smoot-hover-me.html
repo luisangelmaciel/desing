@@ -1,0 +1,54 @@
+<style>
+	.smooth-wrapper {
+  position: absolute;
+  cursor: pointer;
+}
+.smooth-wrapper:hover .smooth-text-outter {
+  transform: translateX(0%);
+}
+.smooth-wrapper:hover .smooth-text-inner {
+  transform: translateX(0%);
+}
+
+.smooth-text--model {
+  color: rgba(0, 0, 0, 0.521);
+  position: absolute;
+}
+
+.smooth-text-outter {
+  position: relative;
+  overflow: hidden;
+  transform: translateX(-100%);
+  transition: 1s;
+}
+
+.smooth-text-inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(100%);
+  transition: 1s;
+}
+
+.smooth-text--mask {
+  color: inherit;
+}
+
+.smooth-text--sizing {
+  visibility: hidden;
+}
+</style>
+
+
+<div class='smooth-wrapper'>	
+	<p class='smooth-text--model'>Smooth Hover me.</p>	
+	<div class="smooth-text-outter">
+		<p class='smooth-text smooth-text--sizing'>Smooth Hover me.</p>
+		<div class="smooth-text-inner">
+			<p class="smooth-text smooth-text--mask">Smooth Hover me.</p>
+		</div>
+	</div>
+	
+</div>
+
+  

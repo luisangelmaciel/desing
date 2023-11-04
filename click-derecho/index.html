@@ -1,0 +1,175 @@
+<div>
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+ <link href='./all.min.css' rel='stylesheet'>
+<link href='./regular.min.css" 
+l='stylesheet'>
+<style>* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  background: #f2f4f6;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+.context-menu { 
+  position: absolute; 
+} 
+.menu {
+  display: flex;  width: 100%;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgb(64 64 64 / 5%);
+  padding: 10px 10px 5px 5px;
+}
+.menu > li > a {
+  font: inherit;
+  border: 0;
+  padding: 10px 30px 10px 15px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: unset;
+  color: #000;
+  font-weight: 500;
+  transition: 0.5s linear;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -ms-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+}
+.menu > li > a:hover {
+  background:#f1f3f7;
+  color: #4b00ff;
+}
+.menu > li > a > i {
+  padding-right: 10px;
+}
+.menu > li.trash > a:hover {
+  color: red;
+}
+
+.svg {
+  font: inherit;
+  border: 0;
+  padding: 10px 30px 10px 15px;
+  width: 0%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  text-decoration: unset;
+  color: #000;
+  font-weight: 500;
+  transition: 0.5s linear;
+  -webkit-transition: 0.5s linear;
+  -moz-transition: 0.5s linear;
+  -ms-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+}
+.svg:hover {
+  background:#f1f3f7;
+  color: #4b00ff;
+}
+.svg {
+  padding-right: 10px;
+}
+.svg {
+  color: red;
+}
+.menu > li > p {
+  font: inherit;
+  border: 0;
+  padding: 10px 30px 10px 15px;
+  width: 100%;
+  display: flex;align-items: center;position: relative;text-decoration: unset;color: #000;font-weight: 500;transition: 0.5s linear;-webkit-transition: 0.5s linear;-moz-transition: 0.5s linear;-ms-transition: 0.5s linear;-o-transition: 0.5s linear;}.menu > li > p:hover {background:#f1f3f7;color: #4b00ff;}.menu > li > p > i {  padding-right: 10px;}.menu > li.trash > p:hover {color: red;}.menu > li > imput {font: inherit;border: 0;padding: 10px 30px 10px 15px;width: 100%;display: flex;align-items: center;position: relative;text-decoration: unset;color: #000;font-weight: 500;transition: 0.5s linear;-webkit-transition: 0.5s linear;-moz-transition: 0.5s linear;-ms-transition: 0.5s linear;-o-transition: 0.5s linear;}.menu > li > imput:hover {background:#f1f3f7;color: #4b00ff;}.menu > li > p > imput {padding-right: 10px;.menu > li.trash > imput:hover {color: red;}
+.gosh {background:transparent;border:none;font-size:20px}  .goshimp {background:transparent;border:none;font-size:18px} .size18px{font-size:18px}  .marginleft15{margin-left:15px} .marginleft5{margin-left:5px} .marginleft30{margin-left:30px}</style>
+ 
+    <div id="contextMenu" class="context-menu" style="display: none"> 
+        <ul class="menu wrap"> 
+            <li><input type="text" value="<script> </script>" id="copyscript" class="goshimp" style="display:none"> <span onclick="myFunctionscript()" class="size18px marginleft5" >
+               &lt;script&gt; &lt;/script&gt;</span></li> 
+            <li><input type="text" value="<style> </style>" id="copystyle" class="goshimp " style="display:none"> <span onclick="myFunctionstyle()" class="size18px marginleft5" >&lt;style&gt; &lt;/style&gt;</span></li> 
+            <li><input type="text" value="<div class=''> </div>" id="copydiv" class="goshimp " style="display:none"> <span onclick="myFunctiondiv()" class="size18px marginleft5" >&lt;div class=''&gt; &lt;/div&gt;</span></li>       
+        </ul> 
+    </div> 
+<!--  <svg class="svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M224 0c-35.3 0-64 28.7-64 64V288c0 35.3 28.7 64 64 64H448c35.3 0 64-28.7 64-64V64c0-35.3-28.7-64-64-64H224zM64 160c-35.3 0-64 28.7-64 64V448c0 35.3 28.7 64 64 64H288c35.3 0 64-28.7 64-64V384H288v64H64V224h64V160H64z"/></svg> -->
+
+  <script>
+document.onclick = hideMenu; 
+       document.oncontextmenu = rightClick; 
+
+        function hideMenu() { 
+            document.getElementById("contextMenu") 
+                    .style.display = "none" 
+        } 
+
+        function rightClick(e) { 
+            e.preventDefault(); 
+
+            if (document.getElementById("contextMenu") .style.display == "block"){ 
+                hideMenu(); 
+            }else{ 
+                var menu = document.getElementById("contextMenu")      
+                menu.style.display = 'block'; 
+                menu.style.left = e.pageX + "px"; 
+                menu.style.top = e.pageY + "px"; 
+            } 
+        } 
+
+
+
+//style
+function myFunctionstyle() {
+  // Get the text field
+  var copyText = document.getElementById("copystyle");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);  
+ 
+}
+
+//script
+function myFunctionscript() {
+  // Get the text field
+  var copyText = document.getElementById("copyscript");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);  
+ 
+}
+
+
+//div
+function myFunctiondiv() {
+  // Get the text field
+  var copyText = document.getElementById("copydiv");
+
+  // Select the text field
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); // For mobile devices
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(copyText.value);  
+ 
+}    
+  </script>
+
+</div>
