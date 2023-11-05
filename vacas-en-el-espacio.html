@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Vacas en el espacio</title>
+  <link rel="stylesheet" href="./style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+
+</head>
+<body>
+
+<svg>
+	<defs></defs>
+</svg>
+
+<!-- double click anywhere to add cows -->
+<!-- then you can drag & throw them -->
+<!-- no library -->
+
+  <script>
+    /* because IE up to and including 11 */
+Math.hypot = Math.hypot || function() {
+  var y = 0;
+  var length = arguments.length;
+
+  for (var i = 0; i < length; i++) {
+    if (arguments[i] === Infinity || arguments[i] === -Infinity) {
+      return Infinity;
+    }
+    y += arguments[i] * arguments[i];
+  }
+  return Math.sqrt(y);
+};
+
+Math.sign = Math.sign || function(x) {
+  x = +x; // convert to a number
+  if (x === 0 || isNaN(x)) {
+    return x;
+  }
+  return x > 0 ? 1 : -1;
+};
+
+/* because me lazy */
+Object.getOwnPropertyNames(Math).map(function(p) {
+  window[p] = Math[p];
+});
+
+var rand = function(min, max, is_int) {
+  var max = ((max - 1) || 0) + 1, 
+      min = min || 0, 
+      gen = min + (max - min)*random();
+    
+  return (is_int)?round(gen):gen;
+};
+
+Node.prototype.setAttrs = function(attr_obj) {
+  for(var prop in attr_obj) {
+    this.setAttribute(prop, attr_obj[prop]);
+  }
+};
+
+var NS_URI = 'http://www.w3.org/2000/svg', 
+		XLink_NS = 'http://www.w3.org/1999/xlink', 
+		BASE = 'https://s3-us-west-2.amazonaws.com/s.cdpn.io/2017/', 
+		EXT = '.jpg', 
+		F_NAME = 'ccc_cow_', 
+		HOLY_DIVER_PALETTE = [
+			'#3b252b', '#f74c43', '#f7ebb2', 
+			'#dbd1a2', '#6dc2a1'
+		], 
+		N_COWS = 8, 
+		GRAVITY = .1, 
+		ID = 'cowshape', 
+		TO_RAD_FACTOR = PI/180, 
+		TO_DEG_FACTOR = 180/PI, 
+		
+		n_shades = HOLY_DIVER_PALETTE.length, 
+		cow_shapes = [], 
+		n_shapes = 0, unique_idx = 0, 
+		svg = document.querySelector('svg'), 
+		w, h, 
+		defs = svg.querySelector('defs'), 
+		t = 0, r_id = null, 
+		dragged = null, dragstart_data = null;
+
+var CowShape = function(idx, x, y, n, r, c) {	
+	this.idx = idx || 0;
+	this.r = r || rand(80, 45, 1);
+	this.x = max(
+		this.r, 
+		min(w - this.r, x || rand(w, 0, 1))
+	);
+	this.y = max(
+		this.r, 
+		min(h - this.r, y || rand(h, 0, 1))
+	);
+	this.n = ~~n || rand(7, 3, 1);
+	this.beta = 2*PI/this.n;
+	this.ri = this.r*cos(this.beta*.5);
+	this.c = c || 
+		HOLY_DIVER_PALETTE[rand(n_shades - 1, 0, 1)];
+	this.rot = rand(180/this.n, -180/this.n, 1);
+	this.vertices = [];
+	this.el = document.createElementNS(NS_URI, 'polygon');
+	this.vx = 0;
+	this.vy = 0;
+	this.ax = 0;
+	this.ay = GRAVITY;
+	this.mooving = true;
+	
+	this.generateVertices = function() {
+		var curr_angle;
+		
+		for(var i = 0; i < this.n; i++) {
+			curr_angle = 
+				(i - .5)*this.beta + .5*PI;
+			
+			this.vertices.push({
+				'x': round(this.r*cos(curr_angle)), 
+				'y': round(this.r*sin(curr_angle))
+			});
+		}
+	};
+	
+	this.stringify = function(what) {
+		var comps = [], str = '';
+		
+		switch(what) {
+			case 'vertices':
+				for(var i = 0; i < this.n; i++) {
+					comps.push(this.vertices[i].x + ',' + 
+										 this.vertices[i].y);
+				}
+				str = comps.join(' ');
+				break;
+			case 'position':
+				comps = [~~this.x || 0, ~~this.y || 0];
+				str = 'translate(val)'.replace(
+					'val', 
+					comps.join(' ')
+				) + 'rotate(val)'.replace(
+					'val', 
+					this.rot%360 || 0
+				);
+				break;
+		}
+		
+		return str;
+	};
+	
+	this.changeXCoord = function(p, rot) {
+		return p.x*cos(rot) - p.y*sin(rot);
+	};
+	
+	this.changeYCoord = function(p, rot) {
+		return p.x*sin(rot) + p.y*cos(rot);
+	};
+	
+	this.changeCoord = function(p, rot) {
+		return {
+			'x': this.changeXCoord(p, rot), 
+			'y': this.changeYCoord(p, rot)
+		};
+	};
+	
+	this.handleWallHit = function(dir, lim) {
+		var rad = this.rot*TO_RAD_FACTOR, 
+				wall, cond = true, 
+				fname = 'change' + dir.toUpperCase() + 'Coord', extreme_coord = 0;
+		
+		if(lim < 0) {
+			wall = 0;
+			
+			for(var i = 0; i < this.n; i++) {
+				extreme_coord = min(
+					extreme_coord, 
+					this[fname](this.vertices[i], rad)
+				);
+			}
+			
+			cond = this[dir] + extreme_coord < wall;
+		}
+		else {
+			wall = (dir === 'x') ? w : h;
+			
+			for(var i = 0; i < this.n; i++) {
+				extreme_coord = max(
+					extreme_coord, 
+					this[fname](this.vertices[i], rad)
+				);
+			}
+			
+			cond = this[dir] + extreme_coord > wall;
+		}
+		
+		if(cond) {
+			this[dir] = wall - extreme_coord;
+			this['v' + dir] *= -.8;
+			this.rot *= -.7;
+		}
+	};
+	
+	this.keepInBounds = function() {
+		this.handleWallHit('x', -1);
+		this.handleWallHit('x', 1);
+		this.handleWallHit('y', -1);
+		this.handleWallHit('y', 1);
+	};
+	
+	this.reposition = function() {
+		this.el.setAttribute(
+			'transform', 
+			this.stringify('position')
+		);
+	};
+		
+	this.moove = function() {
+		var dy0 = h - this.r - this.y, dy1;
+		
+		this.vx += this.ax;
+		this.vy += this.ay;
+
+		this.x += this.vx;
+		this.y += this.vy;
+
+		dy1 = h - this.r - this.y;
+
+		this.rot *= dy1/dy0;
+
+		this.keepInBounds();
+		
+		if(abs(this.vy) < 1 && 
+			 abs(h - this.ri - this.y) < 2) {
+			this.vx *= .7;
+		}
+						
+		if(abs(this.vx) < 1 && abs(this.vy) < 1 && 
+			 abs(h - .5*(this.r + this.ri) - this.y) < 4) {
+			this.y = h - this.ri;
+			this.rot = 0;
+			this.mooving = false;
+		}
+
+		this.reposition();
+	};
+	
+	this.init = function() {		
+		this.generateVertices();
+		
+		this.el.setAttrs({
+			'id': ID + this.idx,
+			'points': this.stringify('vertices'), 
+			'transform': this.stringify('position'), 
+			'stroke': this.c, 
+			'fill': 'url(#c' + rand(N_COWS - 1, 0, 1) + ')'
+		});
+		svg.appendChild(this.el);
+	};
+	
+	this.init();
+};
+
+var init = function() {
+	var frag = document.createDocumentFragment(), 
+			pattern, img;
+	
+	cow_shapes = [];
+	n_shapes = 0;
+	
+	for(var i = 0; i < N_COWS; i++) {
+		pattern = document.createElementNS(NS_URI, 'pattern');
+		pattern.setAttrs({
+			'id': 'c' + i, 
+			'patternContentUnits': 'objectBoundingBox', 
+			'preserveAspectRatio': 'xMidYMid slice', 
+			'viewBox': '0 0 1 1', 
+			'width': '100%', 
+			'height': '100%'
+		});
+		
+		img = document.createElementNS(NS_URI, 'image');
+		img.setAttrs({
+			'preserveAspectRatio': 'xMidYMid slice', 
+			'width': '1', 'height': '1'
+		});
+		img.setAttributeNS(
+			XLink_NS, 
+			'xlink:href', 
+			BASE + F_NAME + i + EXT
+		);
+		
+		pattern.appendChild(img);
+		frag.appendChild(pattern);
+	}
+	
+	defs.appendChild(frag);
+	
+	sizeSVG();
+};
+
+var sizeSVG = function() {
+	var s = getComputedStyle(svg), vb, 
+			changed = false;
+	
+	w = ~~s.width.split('px')[0];
+	h = ~~s.height.split('px')[0];
+	
+	vb = [0, 0, w, h];
+	
+	svg.setAttribute('viewBox', vb.join(' '));
+	
+	if(n_shapes > 0) {
+		for(var i = 0; i < n_shapes; i++) {
+			changed = false;
+			
+			if(cow_shapes[i].x > w - cow_shapes[i].r) {
+				cow_shapes[i].x = w - cow_shapes[i].r;
+				changed = true;
+			}
+			if(cow_shapes[i].y > h - cow_shapes[i].ri) {
+				cow_shapes[i].y = h - cow_shapes[i].ri;
+				changed = true;
+			}
+			else {
+				cow_shapes[i].mooving = true;
+			}
+			
+			if(changed) {
+				cow_shapes[i].reposition();
+			}
+		}
+	}
+};
+
+var action = function() {
+	var cont = false;
+	
+	for(var i = 0; i < n_shapes; i++) {
+		if(cow_shapes[i].mooving && 
+			 cow_shapes[i] !== dragged) {
+			cow_shapes[i].rot = cow_shapes[i].rot%360;
+			cow_shapes[i].moove();
+			cont = true;
+		}
+	}
+	
+	if(!cont) {
+		cancelAnimationFrame(r_id);
+		r_id = null;
+		return;
+	}
+	
+	r_id = requestAnimationFrame(action);
+};
+
+var getShapeById = function(the_id) {
+	for(var i = 0; i < n_shapes; i++) {
+		if(cow_shapes[i].idx === the_id) {
+			return cow_shapes[i];
+		}
+	}
+	
+	return null;
+};
+
+init();
+
+addEventListener('resize', sizeSVG, false);
+
+addEventListener('dblclick', function(e) {
+	cow_shapes.push(
+		new CowShape(unique_idx++, e.clientX, e.clientY)
+	);
+	n_shapes = cow_shapes.length;
+	
+	if(!r_id) {
+		action();
+	}
+}, false);
+
+addEventListener('mousedown', function(e) {
+	var t = e.target, my_idx;
+	
+	if(t.tagName.toLowerCase() === 'polygon') {
+		my_idx = ~~t.id.split(ID)[1];
+		dragged = getShapeById(my_idx);
+		dragstart_data = {
+			'dx': dragged.x - e.clientX, 
+			'dy': dragged.y - e.clientY
+		};
+		dragstart_data.w = min(1.5, hypot(
+			dragstart_data.dx, 
+			dragstart_data.dy
+		)/dragged.ri)*sign(atan2(
+			dragstart_data.dy, 
+			dragstart_data.dx
+		));
+	}
+}, false);
+
+addEventListener('mousemove', function(e) {
+	var prevx, prevy;
+	if(dragged) {
+		prevx = dragged.x;
+		prevy = dragged.y;
+		
+		dragged.x = e.clientX + dragstart_data.dx;
+		dragged.y = e.clientY + dragstart_data.dy;
+		dragged.rot += dragstart_data.w;
+		dragged.vx = dragged.x - prevx;
+		dragged.vy = dragged.y - prevy;
+		dragged.vx = 
+			min(16, abs(dragged.vx))*sign(dragged.vx);
+		dragged.vy = 
+			min(16, abs(dragged.vy))*sign(dragged.vy);
+		
+		dragged.keepInBounds();
+		
+		dragged.reposition();
+	}
+}, false);
+
+addEventListener('mouseup', function(e) {
+	if(dragged) {
+		dragged.mooving = true;
+		dragged = null;
+		
+		if(!r_id) {
+			action();
+		}
+	}
+}, false);
+  </script>
+
+</body>
+</html>
