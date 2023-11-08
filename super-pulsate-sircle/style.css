@@ -1,0 +1,66 @@
+body {
+  background: #082c8a;
+  padding: 100px;
+}
+
+.logo {
+  background: #082c8a;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 0 auto;
+  border-radius: 150px;
+  border: solid 5px #ff004E;
+  animation: play 1.5s ease infinite;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+.logo:after {
+  background: #082c8a;
+  background-size: 100% 100%;
+  content: "Desing";
+  line-height: 205px;
+  color: #ff004e;
+  font-size: 40px;
+  font-family: "HEAVITAS", "Helvetica Rounded", Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  position: absolute;
+  border-radius: 150px;
+  z-index: 99999 !important;
+}
+.logo:hover {
+  animation: none;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+@keyframes play {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    box-shadow: 0 0 0 20px rgba(255, 0, 78, 0.2);
+  }
+  25% {
+    box-shadow: 0 0 0 20px rgba(255, 0, 78, 0.2), 0 0 0 40px rgba(255, 0, 78, 0.2);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(255, 0, 78, 0.2), 0 0 0 40px rgba(255, 0, 78, 0.2), 0 0 0 60px rgba(255, 0, 78, 0.2);
+  }
+  80% {
+    transform: scale(1);
+  }
+}
