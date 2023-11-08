@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Art: Coffee Stain</title>
+  <!--<img src="https://ucarecdn.com/ad91b5ef-a913-454c-b490-0411e167c6c1/-/preview/500x500/-/quality/smart/-/format/auto/">-->
+ 
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>body {
+  margin: 0;
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at calc(50% + 12vmin) calc(50% - 4vmin), #fff 29vmin, #eee)
+}
+
+article {
+  width: 90vmin;
+  height: 40vmin;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+/*   display: flex;
+  justify-content: space-between; */
+}
+
+section {
+  width: 40vmin;
+  aspect-ratio: 1;
+  position: absolute;
+}
+
+section *,
+section *::before,
+section *::after {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.stain {
+  opacity: 0.35;
+  left: 40%;
+  top: -5%;
+  filter: sepia(200%) brightness(360%) contrast(130%) hue-rotate(-15deg) grayscale(20%);
+  background: #eee;
+  mix-blend-mode: darken;
+  -webkit-mask:
+    radial-gradient(farthest-side at 25% 40%, #000 20%, #0000 45%),
+    radial-gradient(#0004, #0000) 10% 25% / 17% 21%,
+    radial-gradient(#0006, #0000) 30% 30% / 20% 20%,
+    radial-gradient(#000c, #0000),
+    radial-gradient(farthest-side, #0000 80%, #000)
+}
+
+.main-stain {
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: 
+    radial-gradient(circle at 70% 20%, #00f 10%, #0000 0),
+    radial-gradient(circle at 81% 40%, #00f 6%, #0000 0),
+    radial-gradient(circle at 20% 20%, #00f 6%, #0000 0),
+    #fff
+    ;
+  box-shadow: 
+    inset 5vmin -0.75vmin 0 -2.75vmin #006,
+    inset -1vmin -1vmin blue,
+    inset -1.5vmin 2.5vmin blue,
+    1vmin 2vmin blue,
+    -1vmin 2vmin 0 -1vmin blue,
+    0 0 0 16vmin #fff;
+  filter: blur(1.5vmin) contrast(500);
+  
+}
+
+.splash-stain {
+  width: 12vmin;
+  aspect-ratio: 1;
+  background:
+    repeating-conic-gradient(#00f 0 3%, #0000 0 11%),
+    repeating-conic-gradient(#0000 0 5%, #00f 0 7%) 50% / 60% 60%,
+    repeating-conic-gradient(#0000 0 7%, #00f 0 9%) 50% / 70% 70%,
+    repeating-conic-gradient(#0000 0 11%, #00f 0 13%) 50% / 80% 80%,
+    radial-gradient(#00f 22%, #0000 0),
+    #fff;
+  background-repeat: no-repeat;
+  filter: blur(0.78vmin) contrast(50) drop-shadow(0 0 0.75vmin #f008);
+  box-shadow: 0 0 0 6vmin #fff;
+  mix-blend-mode: darken;
+  top: -1%;
+  left:63%;
+  border-radius: 50%
+}
+
+.coffee-cup {
+  --c: #fff;
+  --d: #e0e0e0;
+  --s: #fffc;
+  left: 10%;
+  top: 20%;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow:
+    -3.5vmin -2vmin 2vmin -1vmin #0001,
+    -0.5vmin -0.5vmin 2vmin #0002,
+    0 0 5vmin #0001
+}
+
+.handle {
+  width: 32%;
+  height: 18%;
+  top: 99%;
+  left: 49%;
+  transform: rotate(75.5deg);
+  box-shadow: 
+    inset 0.5vmin 0 1vmin #0001,
+   -7vmin 1vmin 2vmin #0001,
+    -2.5vmin 0.5vmin 2vmin #0001,
+    0 0 5vmin #0001;
+  background:radial-gradient(13% 45% at 83% 50%, #fff, #0000),
+   
+    radial-gradient(100% 300% at 0% 70%, #00000018 15%, #0000 30%),
+    
+    radial-gradient(100% 300% at 0% 50%, #0001 15%, #0000 30%),
+    linear-gradient(90deg, #0000 60%, #eee),
+     radial-gradient(at 0 100%, #fffc, #ffff),
+    var(--c);
+  border-radius: 0 2vmin 2vmin 1vmin;
+}
+
+.cup {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background:
+    radial-gradient(farthest-side at 49% 49%, var(--s) 85%, #fff0 90%),
+    radial-gradient(farthest-side at 51% 51%, #0002 86.5%, #fff0 90%),
+    radial-gradient(farthest-side, #ffff, var(--d));
+  box-shadow:
+    inset -0.5vmin -0.5vmin 1vmin 0.125vmin var(--s),
+    inset 0.5vmin 0.5vmin 1vmin var(--s)
+}
+
+.coffee {
+  width: 90%;
+  aspect-ratio: 1;
+  background: 
+/*     radial-gradient(farthest-side at 80% 100%, #0000 95%, #63585633), */
+    radial-gradient(50% 150% at 0 50%, #63585644 30%, #0000 35%),
+    radial-gradient(125% 50% at 60% 0, #63585655 30%, #0000 40%),
+    radial-gradient( closest-side circle at 45% 47%, #0000 92%, #140401 94%),
+    radial-gradient(circle at 110% 80%, #837876, #635856 40%, #332422 50%, #33242200 55%),
+    #080301;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.foam {
+  width: 100%;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow:
+    inset 0.2vmin 1.5vmin red,
+    inset 0.65vmin 0 red,
+    inset -0.5vmin 1.25vmin red,
+    0 0 0 3vmin red
+    ;
+  background:
+    linear-gradient(140deg, #0000 84%, red 0),
+    radial-gradient(35% 100% at 0 50%, red 20%, #0000 0),
+    radial-gradient(125% 40% at 60% 0, red 25%, #0000 0),
+    radial-gradient(farthest-side, #0000 75%, #140401 0)
+    ;
+  filter: blur(1vmin) contrast(300) hue-rotate(63deg) brightness(2.5) sepia(60%) blur(0.05vmin);
+  opacity: 0.8;
+}
+
+.bubbles {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  box-shadow: inset 3vmin 1.5vmin 0.75vmin -2.5vmin #ffe57966;
+}
+
+.bubble {
+  --s: 0.75vmin;
+  aspect-ratio: 1;
+  border-radius: 100%;
+  background: #140401;
+  box-shadow: 
+    inset -1vmin -1vmin 1vmin -1vmin #ff84,
+    inset 0 0 0.25vmin #14040188,
+    0 0 var(--s) #ff86;
+  background-image: 
+    radial-gradient(circle at 60% 75%, #fffc 5%, #fff0 20%),
+    radial-gradient(at 80% 65%, #fff7 2%, #fff0 15%)
+}
+
+/* big bubbles */
+.bubble-00 { 
+  width: 9%;
+  height: 7%;
+  top: 1%;
+  left: 42%;
+  background-image: radial-gradient(at 60% 75%, #fffc 5%, #fff0 20%),radial-gradient(at 80% 65%, #fffc 2%, #fff0 15%)
+}
+
+.bubble-01 { 
+  width: 8%;
+  top: 1.5%;
+  left: 52%;
+  background-image: radial-gradient(at 60% 65%, #fffc 5%, #fff0 20%),radial-gradient(at 40% 25%, #fff7 9%, #fff0 15%)
+}
+
+.bubble-02 { 
+  width: 6%;
+  height: 8%;
+  left: 0.8%;
+  top: 42%;
+  background-image: radial-gradient(circle at 60% 75%, #fffc 5%, #fff0 20%),radial-gradient(at 80% 65%, #fff2 2%, #fff0 15%)
+}
+
+/* bottom right */
+.bubble-03 { 
+  width: 1.7%;
+  top: 80%;
+  left: 88%;
+  background-image: radial-gradient(at 60% 65%, #fffc 5%, #fff0 20%),radial-gradient(at 40% 25%, #fff7 9%, #fff0 15%);
+  border: 1px solid #ff88;
+}
+
+.bubble-04 { 
+  width: 2%;
+  top: 87%;
+  left: 80%;
+  background-image: radial-gradient(at 60% 65%, #fffc 5%, #fff0 20%),radial-gradient(at 40% 25%, #fff7 9%, #fff0 15%)
+}
+
+.bubble-05 { 
+  width: 1.25%;
+  top: 88.75%;
+  left: 78.5%;
+}
+
+.bubble-06 { 
+  width:1.5%;
+  top: 84.5%;
+  left: 83%;
+  background-image: radial-gradient(at 60% 65%, #fffc 5%, #fff0 20%),radial-gradient(at 40% 25%, #fff7 9%, #fff0 15%)
+}
+
+.bubble-07 { 
+  width: 1.5%;
+  top: 82.3%;
+  left: 84.75%;
+  background-image: radial-gradient(at 60% 65%, #fff 5%, #fff0 20%),radial-gradient(at 40% 25%, #fff 9%, #fff0 15%);
+  outline: 1px solid #ff84;
+}
+
+.bubble-08 { 
+  width: 1.7%;
+  top: 92%;
+  left: 74%;
+  background-image: radial-gradient(at 60% 65%, #fff 5%, #fff0 20%),radial-gradient(at 40% 25%, #fff 9%, #fff0 15%);
+  outline: 1px solid #ff84;
+}
+
+
+.bubble-09 { 
+  width: 1.5%;
+  top: 90.5%;
+  left: 75%;
+  background-image: radial-gradient(at 60% 65%, #fff 5%, #fff0 20%),radial-gradient(at 40% 25%, #fff 9%, #fff0 15%);
+  outline: 1px solid #ff84;
+  box-shadow: 
+    0.5vmin 0 0 -0.2vmin #140401,
+    2.5vmin -1.5vmin 0 -0.1vmin #140404;
+}
+
+.bubble-10 {
+  width: 3%;
+  top: 50%;
+}
+
+.bubble-11 {
+  width: 4%;
+  top: 54%;
+  left: 3%;
+  box-shadow: 0 0 0.2vmin 0.1vmin #ff84;
+}
+
+.bubble-12 {
+  width: 2.5%;
+  top: 49.25%;
+  left: 5%;
+  box-shadow: 0 0 0.2vmin 0.2vmin #ff84;
+}
+
+.bubble-13 {
+  width: 3.5%;
+  top: 36.65%;
+  left: 2%;
+}
+
+.bubble-14 {
+  width: 1.5%;
+  top: 40.25%;
+  left: 2%;
+}
+
+.bubble-15 {
+  width: 2%;
+  top: 40%;
+  left: 4.25%;
+}
+
+.bubble-16 {
+  width: 2%;
+  top: 50.35%;
+  left: 3%;
+}
+
+.bubble-17 {
+  width: 2.3%;
+  top: 51.7%;
+  left: 4.5%;
+}
+
+.bubble-18 {
+  width: 1.5%;
+  top: 48.5%;
+  left: 0.125%;
+}
+
+.bubble-19 {
+  aspect-ratio: 3/5;
+  width: 4%;
+  top: 60%;
+  left: 1.5%;
+  box-shadow: 0 0 0.04vmin 0.2vmin #ff82;
+}
+
+.bubble-20 {
+  width: 4%;
+  left: 49%;
+  top: 7%;
+  box-shadow: 0 0 0.1vmin 0.1vmin #ff84;
+}
+
+.bubble-21 {
+  width: 3%;
+  left: 50.2%;
+  top: 0.3%;
+  box-shadow: 0 0 0.1vmin 0.1vmin #ff84;
+}
+
+.bubble-22 {
+  width: 1.2%;
+  left: 50.75%;
+  top: 5.75%;
+  box-shadow: 
+    0 0 0.1vmin 0.1vmin #ff84,
+    0.9vmin 1.2vmin #140401,
+    1.35vmin 1.3vmin 0 -0.07vmin #140401,
+    1.7vmin 1.3vmin 0 -0.1vmin #140401,
+    0.1vmin -0.85vmin 0 -0.07vmin #140401
+}
+
+.bubble-23 {
+  width: 2%;
+  left: 57.5%;
+  top: 8.75%;
+  box-shadow: 0 0 0.1vmin 0.1vmin #ff84
+}
+
+.bubble-24 {
+  width: 3.7%;
+  left: 37%;
+  top: 2.75%;
+  box-shadow: 0 0 0.1vmin 0.1vmin #ff84
+}
+
+.bubble-25 {
+  width: 2%;
+  left: 40%;
+  top: 1.75%;
+  box-shadow: 0 0 0.1vmin 0.1vmin #ff84
+}
+
+.bubble-26 {
+  width: 2.25%;
+  left: 40%;
+  top: 5.75%;
+  box-shadow: 0 0 0.1vmin 0.1vmin #ff84
+}
+
+.bubble-27 {
+  width: 5%;
+  left: 60.5%;
+  top: 2%;
+}
+
+.bubble-28 {
+  aspect-ratio: 5/4;
+  width:4%;
+  left: 60%;
+  top: 7%;
+  box-shadow: 0 0 0.1vmin 0.1vmin #ff84
+}
+
+.bubble-29 {
+  aspect-ratio: 9/8;
+  width: 5.5%;
+  left: 65%;
+  top: 5.2%;
+  box-shadow: 0 0.1vmin 0.2vmin 0.1vmin #ff84
+}
+
+.bubble-30 {
+  aspect-ratio: 5/3;
+  width: 6%;
+  left: 25%;
+  top: 5.8%;
+  border-radius: 50% / 25% 25% 100% 100%;
+  box-shadow: 0 0.1vmin 0.2vmin 0.1vmin #ff84;
+  box-shadow: 
+    inset -1vmin -1vmin 1vmin -1vmin #ff84,
+    inset 0 0 0.25vmin #14040188,
+    0 0.1vmin 0.025vmin 0.1vmin #ff82,
+    0 0 var(--s) #ff86;
+  transform: rotate(-28deg)
+}
+
+.bubble-31 {
+  aspect-ratio: 9/8;
+  width: 3.5%;
+  left: 20%;
+  top: 10.2%;
+  box-shadow: 0 0.1vmin 0.2vmin 0.1vmin #ff84
+}
+
+.bubble-32 {
+  width: 1.5%;
+  left: 23.5%;
+  top: 10%;
+  box-shadow: 0 0.1vmin 0.2vmin 0.1vmin #ff84
+}
+
+.bubble-33 {
+  width: 2.5%;
+  left: 22.5%;
+  top: 8.2%;
+}
+
+.bubble-34 {
+  width: 1.15%;
+  left: 25.25%;
+  top: 9.5%;
+}
+
+.bubble-35 {
+  width: 1.25%;
+  left: 18.7%;
+  top: 12%;
+}
+
+.bubble-36 {
+  width: 2%;
+  left: 19%;
+  top: 13%;
+  box-shadow: 0 0.1vmin 0vmin 0.1vmin #ff84
+}
+
+.bubble-37 {
+  width: 3%;
+  left: 16%;
+  top: 13.4%;
+  box-shadow: 0 0.1vmin 0vmin 0.1vmin #ff84
+}
+
+.bubble-38 {
+  width: 2.2%;
+  left: 13%;
+  top: 16.84%;
+  box-shadow: 0 0.1vmin 0vmin 0.1vmin #ff84
+}
+
+
+.bubble-39 {
+  aspect-ratio: 5/3;
+  width: 6%;
+  left: 82.2%;
+  top: 15.8%;
+  border-radius: 50% / 25% 25% 100% 100%;
+  box-shadow: 0 0.1vmin 0.2vmin 0.1vmin #ff84;
+  box-shadow: 
+    inset -1vmin -1vmin 1vmin -1vmin #ff84,
+    inset 0 0 0.25vmin #14040188,
+    0vmin 0.1vmin 0.06vmin #ff54,
+    0 0 var(--s) #ff86;
+  transform: rotate(45deg)
+}</style>
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<article role="img" aria-label="CSS drawing of a cup with black coffee next to a coffee stain (seen from above)">
+  <section class="stain">
+    <div class="main-stain"></div>
+    <div class="splash-stain"></div>
+  </section>
+  <section class="coffee-cup">
+    <div class="handle"></div>
+    <div class="cup">
+      <div class="coffee">
+        <div class="foam"></div>
+        <div class="bubbles">
+          <div class="bubble bubble-00"></div>
+          <div class="bubble bubble-01"></div>
+          <div class="bubble bubble-02"></div>
+          <div class="bubble bubble-03"></div>
+          <div class="bubble bubble-04"></div>
+          <div class="bubble bubble-05"></div>
+          <div class="bubble bubble-06"></div>
+          <div class="bubble bubble-07"></div>
+          <div class="bubble bubble-08"></div>
+          <div class="bubble bubble-09"></div>
+          <div class="bubble bubble-10"></div>
+          <div class="bubble bubble-11"></div>
+          <div class="bubble bubble-12"></div>
+          <div class="bubble bubble-13"></div>
+          <div class="bubble bubble-14"></div>
+          <div class="bubble bubble-15"></div>
+          <div class="bubble bubble-16"></div>
+          <div class="bubble bubble-17"></div>
+          <div class="bubble bubble-18"></div>
+          <div class="bubble bubble-19"></div>
+          <div class="bubble bubble-20"></div>
+          <div class="bubble bubble-21"></div>
+          <div class="bubble bubble-22"></div>
+          <div class="bubble bubble-23"></div>
+          <div class="bubble bubble-24"></div>
+          <div class="bubble bubble-25"></div>
+          <div class="bubble bubble-26"></div>
+          <div class="bubble bubble-27"></div>
+          <div class="bubble bubble-28"></div>
+          <div class="bubble bubble-29"></div>
+          <div class="bubble bubble-30"></div>
+          <div class="bubble bubble-31"></div>
+          <div class="bubble bubble-32"></div>
+          <div class="bubble bubble-33"></div>
+          <div class="bubble bubble-34"></div>
+          <div class="bubble bubble-35"></div>
+          <div class="bubble bubble-36"></div>
+          <div class="bubble bubble-37"></div>
+          <div class="bubble bubble-38"></div>
+          <div class="bubble bubble-39"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+<!-- partial -->
+  
+</body>
+</html>
