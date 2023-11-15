@@ -1,0 +1,140 @@
+* {
+  border: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-size: calc(16px + (48 - 16)*(100vw - 320px)/ (1920 - 320));
+}
+
+body {
+  background-image: radial-gradient(20em 20em at center, #242424, #000000);
+  font: 1em Hind, sans-serif;
+  color: #f1f1f1;
+  line-height: 1.5;
+  height: 100vh;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: auto;
+}
+
+h1, h2 {
+  line-height: 1;
+  text-transform: uppercase;
+}
+h1 span, h2 span {
+  display: inline-block;
+  position: relative;
+}
+h1 span:before, h2 span:before {
+  content: attr(data-letter);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+h1 span[data-letter=" "], h2 span[data-letter=" "] {
+  width: 0.25em;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: normal;
+}
+h1 span {
+  background: -webkit-linear-gradient(#fff, #a3a3a3);
+}
+h1 span:nth-child(-n + 3) {
+  background: -webkit-linear-gradient(#5785f6, #0c48db);
+}
+h1 span, h1 span:nth-child(-n + 3) {
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h1 span:nth-child(1):before {
+  text-shadow: 0.08em 0 #0c48db, 0.16em 0 0.05em #000;
+}
+h1 span:nth-child(2):before {
+  text-shadow: 0.07518em 0 #0c48db, 0.15035em 0 0.05em #000;
+}
+h1 span:nth-child(3):before {
+  text-shadow: 0.06128em 0 #0c48db, 0.12257em 0 0.05em #000;
+}
+h1 span:nth-child(4):before {
+  text-shadow: 0.04em 0 #969696, 0.08em 0 0.05em #000;
+}
+h1 span:nth-child(5):before {
+  text-shadow: 0.01389em 0 #969696, 0.02778em 0 0.05em #000;
+}
+h1 span:nth-child(6):before {
+  text-shadow: -0.01389em 0 #969696, -0.02778em 0 0.05em #000;
+}
+h1 span:nth-child(7):before {
+  text-shadow: -0.04em 0 #969696, -0.08em 0 0.05em #000;
+}
+h1 span:nth-child(8):before {
+  text-shadow: -0.06128em 0 #969696, -0.12257em 0 0.05em #000;
+}
+h1 span:nth-child(9):before {
+  text-shadow: -0.07518em 0 #969696, -0.15035em 0 0.05em #000;
+}
+h1 span:nth-child(10):before {
+  text-shadow: -0.08em 0 #969696, -0.16em 0 0.05em #000;
+}
+
+h2 {
+  color: #5785F6;
+  font-size: 1em;
+}
+h2 span {
+  background: -webkit-linear-gradient(#87a9f9, #2762f3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h2 span:nth-child(1):before {
+  text-shadow: 0.08em 0 #2762f3, 0.16em 0 0.05em #000;
+}
+h2 span:nth-child(2):before {
+  text-shadow: 0.07727em 0 #2762f3, 0.15455em 0 0.05em #000;
+}
+h2 span:nth-child(3):before {
+  text-shadow: 0.06928em 0 #2762f3, 0.13856em 0 0.05em #000;
+}
+h2 span:nth-child(4):before {
+  text-shadow: 0.05657em 0 #2762f3, 0.11314em 0 0.05em #000;
+}
+h2 span:nth-child(5):before {
+  text-shadow: 0.04em 0 #2762f3, 0.08em 0 0.05em #000;
+}
+h2 span:nth-child(6):before {
+  text-shadow: 0.02071em 0 #2762f3, 0.04141em 0 0.05em #000;
+}
+h2 span:nth-child(7):before {
+  text-shadow: 0em 0 #2762f3, 0em 0 0.05em #000;
+}
+h2 span:nth-child(8):before {
+  text-shadow: -0.02071em 0 #2762f3, -0.04141em 0 0.05em #000;
+}
+h2 span:nth-child(9):before {
+  text-shadow: -0.04em 0 #2762f3, -0.08em 0 0.05em #000;
+}
+h2 span:nth-child(10):before {
+  text-shadow: -0.05657em 0 #2762f3, -0.11314em 0 0.05em #000;
+}
+h2 span:nth-child(11):before {
+  text-shadow: -0.06928em 0 #2762f3, -0.13856em 0 0.05em #000;
+}
+h2 span:nth-child(12):before {
+  text-shadow: -0.07727em 0 #2762f3, -0.15455em 0 0.05em #000;
+}
+h2 span:nth-child(13):before {
+  text-shadow: -0.08em 0 #2762f3, -0.16em 0 0.05em #000;
+}

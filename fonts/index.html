@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="es-MX" >
+<head>
+  <meta charset="UTF-8">
+  <title>Favorite-fonts</title>
+<style>
+/*
+Global Css 
+*/
+html {
+    font-family: "Roboto",sans-serif;
+    font-size: 14px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+
+.sr-only {clip: rect(0, 0, 0, 0);border-width:0;height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;white-space: nowrap;width: 1px;}
+
+.custom-container-fluid{ padding-left:15px;padding-right:15px;}
+.custom-row{ margin-left:-15px; margin-right:-15px;}
+.custom-container {
+    max-width: 1370px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+/*
+Header Section 
+*/
+.logo-section {
+    float: left;
+}
+.header-right-section li {
+    display: inline-block;
+}
+.header-right-section {
+    float: right;
+}
+.header-right-section li a {
+    color: #f00;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 15px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #00000099;
+}
+.logo-section h2 {
+    margin: 0px;
+}
+.header-right-section ul {
+    margin: 0px;
+    padding-left: 0px;
+}
+.is-active a{
+    color: #ff5252!important;
+}
+.header-section {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.header-section:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.logo-section span {
+    font-weight: normal;
+}
+.mid-header-option {
+    float: left;
+}
+.search-fonts input{
+    padding: 10px;
+    border: 0px;outline:0px;
+}
+.inner-header-options:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.type-something input {
+    border: 0px;
+    border-bottom: 1px solid #ccc;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin-bottom: 4px;
+	outline:0px;
+}
+.inner-header-options {
+    margin-top: 25px;
+    border: 1px solid #ccc;
+    border-top-left-radius: 33px;
+    border-bottom-right-radius: 33px;
+}
+.fonts-size.mid-header-option {
+    padding-top: 13px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.type-something input {
+    width: 322px;
+    margin-right: 20px;
+}
+.progressbar-inner {
+    width: 400px;
+    height: 2px;
+    background: #f00;
+    background: rgba(255,82,82,.26);
+}
+.fonts-size.mid-header-option select ,.font-size-progressbar{
+    float: left;
+}
+.fonts-size.mid-header-option {
+    border-right: 1px solid #ccc;
+    padding-top: 15px;
+    padding-bottom: 12px;
+    margin-right: 10px;
+}
+.font-size-progressbar {
+    position: relative;
+    margin-top: 8px;
+    margin-left: 9px;
+}
+span.thum {
+    border-color: rgb(255,82,82);
+    background-color: rgb(255,82,82);
+    width: 15px;
+    height: 15px;
+    display: block;
+    border-radius: 50%;
+    position: absolute;
+    top: -7px;
+}
+.reset-section,.view-type,.background-color {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 23px;
+    font-weight: normal;
+    border-radius: 50%;
+    /* padding-top: 9px; */
+    line-height: 40px;
+	    margin-top: 2px;
+}
+.reset-section:hover,.view-type:hover,.background-color:hover {
+    background: #e8e8e8;
+}
+.inner-header-options {
+    margin-top: 25px;
+    border: 1px solid #ccc;
+	height: 44px;
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+    border-bottom-right-radius: 23px;
+    border-top-right-radius: 23px;
+}
+.border-space {
+    float: left;
+    /* width: 1px; */
+    height: 25px;
+    border-left: 1px solid #ccc;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.search-fonts {
+    margin-top: 5px;
+    margin-left: 21px;
+}
+.type-something {
+    border-right: 1px solid #ccc;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.text-type {
+    padding: 13px;
+    border-left: 1px solid #ccc;
+    padding-bottom: 13px;
+}
+.text-type select,.fonts-size select  {
+    border: 0px;
+    outline: 0px;
+}
+.inner-header-options input,.inner-header-options select,.fonts-size select {
+    /* font-size: 14px; */
+    /* font-weight: 500; */
+    /* font-family: "Roboto",sans-serif; */
+    color: #3c4043;
+    font-size: 14px;
+    font-family: Roboto,"Helvetica Neue",sans-serif;
+    font-weight: 500;
+}
+.option-for-bg ul {
+    padding: 0px;
+}
+.option-for-bg li {
+    display: block;
+    float: left;
+    margin-left: 14px;
+    margin-bottom: 11px;
+}
+.bg-color {
+    width: 30px;
+    height: 30px;
+    /* background: #000; */
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+.black-bg{ background:#000;}
+.white-bg{ background:#fff;}
+.option-for-bg {
+    position: absolute;
+}
+.option-for-bg ul {
+    margin: 0px;
+}
+.option-for-bg {
+    top: 43px;
+    width: 100px;
+    padding-top: 13px;
+    border: 1px solid #ccc;
+       border-radius: 3px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.2), 0 1px 1px 0 rgba(0,0,0,.14), 0 2px 1px -1px rgba(0,0,0,.12);
+    /*-webkit-transform-origin: top right;*/
+}
+.background-color.mid-header-option {
+    position: relative;
+}
+.hide-this{ display:none;}
+/*
+ToolTip
+*/
+.tooltip .tooltiptext {
+    visibility: hidden;
+    position: absolute;
+    width: 82px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    padding: 0px 0;
+    border-radius: 6px;
+    z-index: 1;
+    transition: opacity .6s;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 23px;
+}
+.option-for-bg {
+    display: none;
+}
+.tooltip-bottom {
+    top: 135%;
+    left: 50%;
+    margin-left: -60px;
+}
+.tooltip-bottom::after {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #555 transparent;
+}
+.tooltip {
+    position: relative;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.has-3-columns .grid-list-tile {
+    width: -webkit-calc(33.3333333333% - 26.6666666667px + 0px);
+    width: calc(33.3333333333% - 26.6666666667px + 0px);
+    margin-right: 40px;
+}
+ul.has-3-columns {
+    padding-left: 0px;
+}
+li.grid-list-tile {
+    float: left;
+    border-top: 1px solid #666;
+    list-style-type: none;
+}
+li.grid-list-tile h2 {
+    /* margin: 0px; */
+    margin-bottom: 0px;
+    font-size: 14px;
+}
+li.grid-list-tile h3 {
+    margin: 0px;
+    font-size: 13px;
+    font-weight: normal;
+    color: rgba(0,0,0,.6);
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+.onhover-more-option ul {
+    padding: 0px;
+}
+.onhover-more-option li {
+    float: left;
+    list-style-type: none;
+}
+.onhover-more-option li select {
+    padding: 5px;
+    border: 0px;
+    outline: 0px;
+    border-right: 1px solid #ff525252;
+    margin-right: 10px;
+    width: 131px;
+}
+p.demo-text {
+    clear: both;
+}
+.onhover-more-option li:last-child {
+    padding-top: 4px;
+}
+.onhover-more-option select {
+    color: #ff5252;
+    font-weight: bold;
+}
+p.demo-text {
+    font-size: 41px;
+}
+.onhover-more-option {
+    visibility: hidden;
+}
+li.grid-list-tile:hover .onhover-more-option {
+    visibility: visible;
+}
+.sorting-left {
+    float: left;
+}
+.sorting-right {
+    float: right;
+}
+.sorting-section:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.sorting-left p {
+    margin: 0px;
+}
+.sorting-right select {
+    font-size: 14px;
+    font-weight: bold;
+    border: 0px;
+}
+.custom-container-fluid.sorting-section {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+.sorting-left p span {
+    color: #f00;
+}
+li.grid-list-tile:nth-child(3n) {
+ margin-right:0px;
+}
+.onhover-more-option .progressbar-inner {
+    width: 99px;
+    height: 2px;
+    background: #f00;
+    background: rgba(255,82,82,.26);
+}
+.block-fontsize{ float:left;}
+.fixed-header{
+    background: #fff;
+    border: 0;
+    border-top: 1px solid #dadce0;
+    border-bottom: 1px solid #dadce0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    height: 47px;
+    left: 0;
+    margin: 0 auto;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 100%;
+    z-index: 80;
+    padding-left: 20px;
+    padding-right: 20px;
+    -webkit-transition: box-shadow .2s cubic-bezier(0.55,0,0.55,0.2);
+    transition: box-shadow .2s cubic-bezier(0.55,0,0.55,0.2);
+    -webkit-box-shadow: 0 4px 4px rgba(0,0,0,.06);
+    box-shadow: 0 4px 4px rgba(0,0,0,.06);
+}
+.fixed-header .inner-header-options {
+    margin-top: 0px;
+}
+.fixed-header .inner-header-options {
+    margin-top: 0px;
+    border: 0px;
+}
+.active-bg .option-for-bg {
+    display: block;
+    background: #fff;
+}
+.active-bg span.tooltiptext.tooltip-bottom {
+    display: none;
+}
+.bg-color span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #ff5252;
+    margin-top: 5px !important;
+    /* margin-left: 4px; */
+    margin: 0 auto;
+}
+.bg-color:not(.active-bg) span {
+    display: none;
+}
+.mid-section:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.bg-color span {
+    line-height: 16px;
+}
+.bg-color span i {
+    font-size: 15px;
+    /* line-height: 0px; */
+}
+
+/*
+Black Background 
+*/
+body.bg-black {
+    background: #000;
+    color: #fff;
+}
+body.bg-black input ,body.bg-black  select{
+    background: transparent;
+	color: #fff;
+}
+body.bg-black  .fixed-header {
+    background: #000;
+}	
+body.bg-black  .onhover-more-option select{ color:#fff;}
+body.bg-black ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #fff;
+}
+body.bg-black ::-moz-placeholder { /* Firefox 19+ */
+  color: #fff;
+}
+body.bg-black :-ms-input-placeholder { /* IE 10+ */
+  color: #fff;
+}
+body.bg-black :-moz-placeholder { /* Firefox 18- */
+   color: #fff;
+}
+body.bg-black  .header-right-section li a{ color:#fff;}
+.view-type i {
+    display: none;
+}
+body.bg-black  .reset-section:hover, body.bg-black  .view-type:hover, body.bg-black  .background-color:hover {
+    background: #534e4e;
+}
+.view-type-active {
+    display: inline-block !important;
+}
+li.grid-list-tile.list-view-width {
+    width: -webkit-calc(100% - 0px + 0px);
+    width: calc(100% - 0px + 0px);
+    margin-right: 40px;
+}
+p.demo-text {
+    word-break: break-all;
+}
+</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<script src="./jquery_3.6.0.min.js"></script>
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<!-----// Header section Start --->
+<div class="header-section custom-container-fluid">
+   <div class="custom-row">
+       <div class="custom-container">
+	        <!----// Left --->
+			<div class="logo-section">
+				<span style="font-weight: 900; color:grey">Base64 </span><h2>Fonts<span>Base64</span> </h2>
+			</div>
+			<!---// Left End --->
+			<!----// Right Section --->
+			<div class="header-right-section">
+			    <ul>				   		 
+				   <li><a href="#" style="display:none" >ARTICLES</a></li>
+				   <li class="background-color mid-header-option tooltip">
+					
+					<i class="fa fa-tint" aria-hidden="true"><!-- Generated by IcoMoon.io -->
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+						<title>luna-one</title>
+						<path d="M20.234 5.716c1.867 1.465 0.627 0.007 1.319 2.449 2.117-2.31 0.645-0.448 2.583-1.406l-2.086-2.814-1.089 1.273c-0.090 0.068-0.277 0.188-0.356 0.245-0.081 0.060-0.254 0.16-0.371 0.252z"></path>
+						<path d="M22.38 26.584c-12.109 6.666-23.626-15.148-8.865-21.307-1.403 4.986-2.957 8.19-0.177 13.731 2.769 5.514 6.049 5.479 9.042 7.576zM28.276 24.373c-3.083-0.75-4.979-0.102-7.946-1.908-11.775-7.166-1.902-18.677-2.035-20.399-4.683-2.46-19.071 6.695-13.181 19.953 5.538 12.46 23.477 8.913 23.162 2.354z"></path>
+						<path d="M23.834 16.902c-3.275-0.565-3.256 2.716 0.156 2.15l-0.156-2.15z"></path>
+						</svg></i>
+					<div class="option-for-bg">
+					  <ul>
+						<li class="black-bg bg-color" data-bg="black"><span>
+							
+							<i class="fa fa-check" aria-hidden="true"></i></span></li>
+						<li class="white-bg bg-color active-bg" data-bg="white"><span><i class="fa fa-check" aria-hidden="true"></i></span></li>
+					  </ul>
+					</div>
+					<span class="tooltiptext tooltip-bottom">Select the background Color</span>
+				   </li>
+				   <li class="is-active"><a href="#">CATALOG</a></li>		
+				</ul>
+			</div>
+			<!----// Right Section End --->
+	   </div>
+   </div>
+   
+</div>
+<!----// Header Section End ---->
+<!----// Mid Section ---->
+<div class="mid-section">
+  <!------// Mid Section Header --->
+  <div class="mid-section-header custom-container-fluid">
+     <div class="custom-row">
+       <div class="custom-container">
+	   <div class="inner-header-options">
+	   <!----// Text Type -->
+	   <div class="text-type mid-header-option tooltip">
+	      <select>
+		     <option Sentence</option>
+			 <option style="display:none">Alphabet</option>
+		     <option>Paragraph</option>
+		     <option style="display:none">Numerals</option>
+			 <option style="display:none">Custom</option>
+		  </select>
+		  <span class="tooltiptext tooltip-bottom">Updated preview text</span>
+	   </div>
+	   <!----// Text Type End -->
+	   <!-----// Border Space --->
+	   <div class="border-space"></div>
+	   <!-----// Border Space End --->
+	   <!----// Type Something --->
+	   <div class="type-something mid-header-option">
+	      <input type="text" placeholder="Type something" />
+	   </div>
+	   <!----// Type Something End -->
+	   <!----// Background Color --->
+	   <div class="background-color mid-header-option tooltip">
+	      <i class="fa fa-tint" aria-hidden="true"></i>
+		  <div class="option-for-bg">
+		    <ul>
+			  <li class="black-bg bg-color" data-bg="black"><span><i class="fa fa-check" aria-hidden="true"></i></span></li>
+			  <li class="white-bg bg-color active-bg" data-bg="white"><span><i class="fa fa-check" aria-hidden="true"></i></span></li>
+			</ul>
+		  </div>
+		  <span class="tooltiptext tooltip-bottom">Select the background Color</span>
+	   </div>
+	   <!----// Background Color End --->
+	   <!-----// Border Space --->
+	   <div class="border-space"></div>
+	   <!-----// Border Space End --->
+	   <!----// View Type --->
+	   <div class="view-type mid-header-option tooltip" style="display:none">
+	      <i class="fa fa-th-large view-type-active grid-view" aria-hidden="true" data-view-type="grid"></i>
+		  <i class="fa fa-th-list list-view" aria-hidden="true" data-view-type="list" ></i>
+		  <span class="tooltiptext tooltip-bottom" >View as list</span>
+	   </div>
+	   <!-----// View Type End --->
+	   <!-----// Border Space --->
+	   <div class="border-space"></div>
+	   <!-----// Border Space End --->
+	   <!----// Reset Section --->
+	   <div class="reset-section mid-header-option tooltip" style="display:none">
+	   <i class="fa fa-repeat" aria-hidden="true"></i>
+	   <span class="tooltiptext tooltip-bottom">Reset</span>
+	   </div>
+	   <!-----// Reset Section End --->
+	  </div>
+	  </div>
+    </div>	  
+  </div>
+  <!----// Mid Section End ---->
+  <!-----/// sorting Section --->
+    <div class="custom-container-fluid sorting-section">
+    <div class="custom-row">
+       <div class="custom-container">
+    <!---// Sorting Left -->
+     <div class="sorting-left">
+	   <p>Viewing <span>15</span> of 15 font families</p>
+	 </div>
+	 <!---// Sorting Left -->
+	 <!---// Sorting Right -->
+	 <div class="sorting-right" style="display:none">
+	   <select>
+	     <option> Trending now </option>
+		 <option>Most popular </option>
+	     <option>Newest </option>
+		 <option>Name </option>
+	   </select>	 
+	 </div>
+	 <!----// Sorting End -->
+  </div>
+  </div>
+  </div>
+  <!----// Sorting Section End --->
+  
+  <!------/// Mid Content Section --->
+  <div class="custom-container-fluid mid-section-content">
+    <div class="custom-row">
+       <div class="custom-container">
+          <ul class="has-3-columns">
+		  <li class="grid-list-tile">
+			<h2> ABeeZee </h2>
+			<h3> Anja Meiners <span>(2 Style )</span></h3>
+			<div class="onhover-more-option">
+			   <ul>
+			     <li>
+				   <select>
+		             <option>Sentence</option>
+			         <option>Alphabet</option>
+		             <option>Paragraph</option>
+		             <option>Numerals</option>
+			         <option>Custom</option>
+		           </select>
+				 </li>
+				 <li>
+				    <select>
+				      <option>Regular 400</option>
+					  <option>Regular 400 Italic</option>
+				   </select>
+				 </li>
+				 <li>
+				    <span class="block-fontsize">40px</span>
+				    <div class="font-size-progressbar">
+		             <div class="progressbar-inner"></div>
+			         <span class="thum"></span>
+		            </div>
+				 </li>
+			   </ul>
+			</div>
+			<p class="demo-text">
+			  All their equipment and instruments are alive.
+			</p>
+			
+			</li>
+			<li class="grid-list-tile">
+			<h2> ABeeZee </h2>
+			<h3> Anja Meiners <span>(2 Style )</span></h3>
+			<div class="onhover-more-option">
+			   <ul>
+			     <li>
+				   <select>
+		             <option>Sentence</option>
+			         <option>Alphabet</option>
+		             <option>Paragraph</option>
+		             <option>Numerals</option>
+			         <option>Custom</option>
+		           </select>
+				 </li>
+				 <li>
+				    <select>
+				      <option>Regular 400</option>
+					  <option>Regular 400 Italic</option>
+				   </select>
+				 </li>
+				 <li>
+				    <span class="block-fontsize">40px</span>
+				    <div class="font-size-progressbar">
+		             <div class="progressbar-inner"></div>
+			         <span class="thum"></span>
+		            </div>
+				 </li>
+			   </ul>
+			</div>
+			<p class="demo-text">
+			  All their equipment and instruments are alive.
+			</p>
+			
+			</li>
+            
+		  </ul>
+   </div>
+   </div> 
+</div>   
+  <!-----// Mid Content Section End ---->
+
+</div>
+<!----// Mid Section End --->
+
+
+
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>

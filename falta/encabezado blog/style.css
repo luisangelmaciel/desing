@@ -1,0 +1,48 @@
+a, a:hover {text-decoration:none;}
+.item {margin:0px auto;}
+
+/* ---- UI Style ----- */
+.item { background-color:#fff; width:450px; }
+.item .horizontal {
+  transform: rotate(-90deg);
+  position:absolute;
+  left:-100px;
+  top:30%;
+}
+  
+.item .text {
+  padding:2em; 
+  position:relative; 
+  z-index:1; 
+}
+.item .text figure { 
+  font-size:15em;
+  margin:0px;
+  padding:0px;
+  color:rgba(0,0,0,0.10);
+  position:relative; 
+  z-index:1; 
+}
+.item .text figcaption { 
+  position:absolute; 
+  z-index:10; 
+  margin-top:2%;
+  padding:10%;
+}
+.item .text h1 {font-size:50px; }
+.item .text h3 {margin:0px 0px 30px; color:rgba(0,0,0,0.30); }
+.item .text a {color:rgba(0,0,0,0.70);}
+.item .text p {
+  color:rgba(0,0,0,0.70); 
+  line-height:22px; 
+  font-weight:300;
+  font-size:13px;
+}
+.item .text a.readmore {
+  color:rgba(0,0,0,0.60); 
+  font-style: italic;
+  font-size:13px;
+}
+.item .text a.readmore:hover {
+  color:rgba(0,0,0,0.90); 
+}

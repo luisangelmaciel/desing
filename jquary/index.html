@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Counter for 280-Byte jqery</title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <textarea rows="6"></textarea>
+  <p style="text-align: right;">0/280</p>
+</div>
+<style>.warn {color: #c00;}</style>
+<script>
+document.querySelector("textarea").addEventListener("keydown",ctBytes);
+
+function ctBytes() {
+  let el = this,
+      to = setTimeout(function() {
+            let len = el.value.length,
+                ct = document.querySelector("p"),
+                max = 280;
+
+            ct.innerHTML = len + "/" + max;
+            ct.className = len > max ? "warn" : "";
+        
+            clearTimeout(to);
+          }, 1);
+}</script>
+<!-- partial -->
+  
+</body>
+</html>

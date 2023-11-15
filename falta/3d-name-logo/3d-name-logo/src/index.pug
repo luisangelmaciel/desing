@@ -1,0 +1,12 @@
+- var title = "JonKantner";
+- var subtitle = "Web Developer";
+
+main
+	h1
+		- for (var t of title) {
+			span(data-letter=t)=t
+		- }
+	h2
+		- for (var s of subtitle) {
+			span(data-letter=s)=s
+		- }

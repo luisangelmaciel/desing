@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen -  ThreeJS &amp; GSAP - Space Exploration - Landing Page Concept</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css'><link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="app background">
+	<div class="box"></div>
+	<div id="cover"></div>
+	<header>
+		<div id="logo">PLANET X</div>
+		<nav id="nav" class="d-none d-lg-flex">
+			<a class='nav-item' id='home' href='#'>HOME</a>
+			<a class='nav-item' id='planets' href='#'>PLANETS</a>
+			<a class='nav-item' id='discover' href='#'>DISCOVER</a>
+			<a class='nav-item' id='space-trips' href='#'>SPACE TRIPS</a>
+			<a class='nav-item' id='about' href='#'>ABOUT</a>
+		</nav>
+		<i id="menu-button" class="d-lg-none d-xl-none d-flex align-items-center fas fa-bars"></i>
+	</header>
+	<menu id="menu-bar" class='invisible'>
+		<div class="menu-wrapper row">
+			<div class="d-flex flex-column col-sm-2 col-4 justify-content-center">
+				<i class="fas fa-meteor fa-3x d-flex justify-content-center green"></i>
+				<p class="text-center">HOME</p>
+			</div>
+			<div class="d-flex flex-column col-sm-2 col-4 justify-content-center">
+				<i class="fas fa-globe-americas fa-3x d-flex justify-content-center green"></i>
+				<p class="text-center">PLANETS</p>
+			</div>
+			<div class="d-flex flex-column col-sm-2 col-4 justify-content-center">
+				<i class="fas fa-satellite fa-3x d-flex justify-content-center green"></i>
+				<p class="text-center">DISCOVER</p>
+			</div>
+			<div class="d-flex flex-column col-sm-2 col-4 justify-content-center">
+				<i class="fas fa-space-shuttle fa-3x d-flex justify-content-center green"></i>
+				<p class="text-center">TRIPS</p>
+			</div>
+			<div class="d-flex flex-column col-sm-2 col-4 justify-content-center">
+				<i class="fas fa-user-astronaut fa-3x d-flex justify-content-center green"></i>
+				<p class="text-center">ABOUT</p>
+			</div>
+		</div>
+	</menu>
+	<div class="meteoroid-rain">
+		<img class="mtr-1 meteoroid" src="https://assets.codepen.io/1839803/meteoroid.svg" />
+		<img class="mtr-2 meteoroid" src="https://assets.codepen.io/1839803/meteoroid.svg" />
+		<img class="mtr-3 meteoroid" src="https://assets.codepen.io/1839803/meteoroid.svg" />
+		<img class="mtr-4 meteoroid" src="https://assets.codepen.io/1839803/meteoroid.svg" />
+		<img class="mtr-5 meteoroid" src="https://assets.codepen.io/1839803/meteoroid.svg" />
+		<img class="mtr-6 meteoroid" src="https://assets.codepen.io/1839803/meteoroid.svg" />
+	</div>
+	<div class="banner-area">
+		<span>DISCOVER SPACE</span>
+	</div>
+	<div class="hud-area">
+		<img id="hud-left" src="https://assets.codepen.io/1839803/hud-element.svg" />
+		<img id="hud-right" src="https://assets.codepen.io/1839803/hud-element.svg" />
+	</div>
+	<img id="hud-bottom" src="https://assets.codepen.io/1839803/hud-bottom.svg" />
+	<div id="spinner" class="lottie"></div>
+	<section>
+		<div id="scene-container"></div>
+	</section>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r127/three.min.js'></script>
+<script src='https://unpkg.com/three@0.85.0/examples/js/controls/OrbitControls.js'></script>
+<script src='https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.7.8/lottie.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

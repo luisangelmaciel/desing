@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es-mx">
+
+<head>
+  <meta charset="UTF-8">    
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Top 10 😎 (Netflix Style)</title>
+<style type="text/css" charset="utf-8">@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+*,
+*:before,
+*:after {
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif; 
+}
+:root {
+--bg: #1b1818;
+--size: 50vmin;
+--height: var(--size);
+--width: calc(0.6875 * var(--size));
+--font-size: calc(0.74 * var(--size));
+--gap: calc(0.22 * var(--size));
+}
+body {
+background: var(--bg);
+min-height: 100vh;
+display: flex;
+align-items: center;
+justify-content: start;
+font-family: 'Roboto', sans-serif;overflow: hidden;
+}
+.top-picks {max-width: 100%;padding: 0 2rem;}
+.top-picks__track {height: var(--height);margin: 0;padding: 0;display: flex;list-style-type: none;padding: 0 var(--gap);max-width: 100%;overflow-x: auto;overflow-y: visible;counter-reset: index;-ms-scroll-snap-type: x mandatory;scroll-snap-type: x mandatory;}
+.top-picks__title {color: #fff;font-size: clamp(1.2rem, 5vmin, 3rem);font-weight: 700;}
+.top-picks__item {overflow: hidden;width: calc(var(--width) + var(--gap));flex: 0 0 calc(var(--width) + var(--gap));position: relative;list-style: none;counter-increment: index;padding-left: var(--gap);scroll-snap-align: center;}
+.top-picks__item.item:hover img {filter: saturate(100%); box-shadow: 0 0.15em 1em rgb(0, 0, 0);}
+.box-shadow {box-shadow: 0 0.5em 3em rgb(0, 0, 0); border-radius: 50px;}
+.con-una-sombra-negra-en-el-texto {color: white;text-shadow: 2px 2px 4px #000000;}
+.top-picks__item .item__card {width: var(--width);position: absolute;right: 0;top: 0;bottom: 0;border-radius: 2vmin;background: #242424;overflow-x: hidden;}
+.top-picks__item .item__card:after {position: absolute;content: '';bottom: 1rem;right: 1rem;height: 1.5rem;width: 1.5rem;background-image: url("https://assets.codepen.io/605876/avatar.png");background-size: cover;background-repeat: no-repeat;}
+.top-picks__item .item__card img {position: absolute;height: 100%;width: 100%;-o-object-fit: cover;object-fit: cover;transition: filter 0.2s;filter: saturate(50%);}
+.top-picks__item .item__card span {text-decoration: none;position: absolute;top: 2rem;right: 2rem;max-width: 50%;text-align: right;color: #fff;font-weight: bold;font-size: clamp(1rem, 2vmin, 2rem);text-shadow: 0.5vmin 0 2vmin var(--bg);}
+.top-picks__item:after {content: counter(index);position: absolute;color: var(--bg);font-size: var(--font-size);line-height: 0.7;bottom: 0;font-weight: bold;letter-spacing: -5vmin;left: 0;-webkit-text-stroke: 0.5vmin #fff;text-shadow: 1vmin 0 4vmin var(--bg);transform: translate(-14%, 0);}
+/*.top-picks__item .item__card::after {position: relative;content: '';height: 0.25rem;width: 0.25rem; margin: 20%; padding:25%;background-color:  #242424; align-items: center;
+background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzODQgNTEyIj48cGF0aCBkPSJNMzY5Ljk0MSA5Ny45NDFsLTgzLjg4Mi04My44ODJBNDggNDggMCAwIDAgMjUyLjExOCAwSDQ4QzIxLjQ5IDAgMCAyMS40OSAwIDQ4djQxNmMwIDI2LjUxIDIxLjQ5IDQ4IDQ4IDQ4aDI4OGMyNi41MSAwIDQ4LTIxLjQ5IDQ4LTQ4VjEzMS44ODJhNDggNDggMCAwIDAtMTQuMDU5LTMzLjk0MXpNMzMyLjExOCAxMjhIMjU2VjUxLjg4MkwzMzIuMTE4IDEyOHpNNDggNDY0VjQ4aDE2MHYxMDRjMCAxMy4yNTUgMTAuNzQ1IDI0IDI0IDI0aDEwNHYyODhINDh6bTIyOC42ODctMjExLjMwM0wyMjQgMzA1LjM3NFYyNjhjMC0xMS4wNDYtOC45NTQtMjAtMjAtMjBIMTAwYy0xMS4wNDYgMC0yMCA4Ljk1NC0yMCAyMHYxMDRjMCAxMS4wNDYgOC45NTQgMjAgMjAgMjBoMTA0YzExLjA0NiAwIDIwLTguOTU0IDIwLTIwdi0zNy4zNzRsNTIuNjg3IDUyLjY3NEMyODYuNzA0IDM5Ny4zMTggMzA0IDM5MC4yOCAzMDQgMzc1Ljk4NlYyNjQuMDExYzAtMTQuMzExLTE3LjMwOS0yMS4zMTktMjcuMzEzLTExLjMxNHoiLz48L3N2Zz4=");background-size: 70%;background-repeat: no-repeat;}*/
+
+/*small*/
+@media (max-width:600px) {
+  .top-picks {max-width: 100%;padding: 0.25rem;}
+  .top-picks__title {font-size: clamp(1.6rem, 6vmin, 3.5rem);font-weight: 700;}
+  .top-picks__title-big {font-size: clamp(2.4rem, 8vmin, 4.5rem);font-weight: 900;}
+}
+/*large*/
+@media (min-width:993px) {
+  .top-picks {max-width: 100%;padding: 0 1rem}
+    .w3-hide-large {
+        display: none!important
+    }
+    .top-picks__title {color: #fff;font-size: clamp(1.8rem, 8vmin, 5rem);font-weight: 900;}
+    .top-picks__title-big {font-size: clamp(3.6rem, 12vmin, 8rem);font-weight: 900;}
+    
+}
+/*medium */
+@media (max-width:992px) and (min-width:601px) {
+    .w3-hide-medium {
+        display: none!important
+    }
+    .top-picks {max-width: 100%;padding: 0 1rem}
+    .top-picks__title-big {font-size: clamp(2.4rem, 8vmin, 4.5rem);font-weight: 900;}
+}
+.sr-only {clip: rect(0, 0, 0, 0);border-width:0;height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;white-space: nowrap;width: 1px;}
+</style>
+
+</head>
+<body>
+
+<div class="top-picks">
+  <h1 class="top-picks__title con-una-sombra-negra-en-el-texto "><span class="top-picks__title-big">Top 10</span> <br>in Lamp's Pens Today</h1>
+  <ul class="top-picks__track">
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1MJt9FXeD2jfWWga7UystpWjlPmzrmcFV/view?usp=sharing" target="_blank"><img src="./PhotoRetouch1682979728751.webp" alt="Aladin 1992" class=""><span class="file-video"></span>  <span><span class="sr-only">Download Español Latino</span>Aladin, 1992</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow " href="https://drive.google.com/file/d/1eO4B1_2QXGvwz2WIzOcDn184-CtGx48i/view?usp=sharing" target="_blank"><img src="./PhotoRetouch1682979728751.webp" alt="Kinsey 2004"/><span>Kinsey 2004</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1Xz9x5A3K-4ik6-8Ye7BRYd0PQ-ouTnvq/view?usp=sharing" target="_blank"><img src="https://assets.codepen.io/605876/css-tic-tac-toe.png" alt="Toy Story 1"/><span>Toy Story 1</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1Ddo8z9-spA7i7B4TAjhIoxUJDRuoz-pp/view?usp=sharing" target="_blank"><img src="https://assets.codepen.io/605876/turbo-kitty.png"/ alt="Toy Story 2"><span>Toy Story 2 </span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1JE3DNOrqdtcfY3PMw91e35-aNv7-KQd0/view?usp=sharing" target="_blank"><img src="https://assets.codepen.io/605876/css-drawers.png?format=auto" alt="Toy Story 3"/><span>Toy Story 3</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1YKDPbNOeYV-1m4RmLC-WZx8v44MyAiD9/view?usp=sharing" target="_blank"><img src="https://assets.codepen.io/605876/3d-studio-room.png" alt=""/><span>Yo soy Simon </span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://terabox.com/s/1NnGkCyuH6KLso7codSrzmQ" target="_blank"><img src="https://assets.codepen.io/605876/rambear.png"/ alt="Animales fantasticos "><span>Animales fantasticos </span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://terabox.com/s/1Fey_1CFTHiz2A7k4tRVcDQ" target="_blank"><img src="https://assets.codepen.io/605876/care-bear-needs-love.png" alt="Animales Fantasticos "/><span>Animales Fantasticos  2</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://terabox.com/s/1WyZiBI4vorJyY8JA0IGESw" target="_blank"><img src="https://assets.codepen.io/605876/hsl-dimmer.png" alt="Hercules"/><span>Hercules</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://terabox.com/s/1lrgUVLhqSw1B7JRSb5oF7w" target="_blank"><img src="https://assets.codepen.io/605876/tuggable-lightbulb.png" alt="Pride Given "/><span>Pride Given </span></a></li>
+  </ul>
+</div>
+
+
+<div class="top-picks">
+  <h1 class="top-picks__title con-una-sombra-negra-en-el-texto "><span class="top-picks__title-big">Top 10</span> <br>in Lamp's Pens Today</h1>
+  <ul class="top-picks__track">
+    <li class="item top-picks__item">
+      <a class="item__card box-shadow" href="" target="_blank"><img src="./PhotoRetouch1682979728751.webp" alt="Aladin 1992" class="">
+        <span class="file-video"></span>  <span><span class="sr-only">Download Español Latino</span>Aladin, 1992</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1eO4B1_2QXGvwz2WIzOcDn184-CtGx48i/view?usp=sharing" target="_blank"><img src="./PhotoRetouch1682979728751.webp" alt="Kinsey 2004"/><span>Kinsey 2004</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1Xz9x5A3K-4ik6-8Ye7BRYd0PQ-ouTnvq/view?usp=sharing" target="_blank"><img src="https://assets.codepen.io/605876/css-tic-tac-toe.png" alt="Toy Story 1"/><span>Toy Story 1</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1Ddo8z9-spA7i7B4TAjhIoxUJDRuoz-pp/view?usp=sharing" target="_blank"><img src="https://assets.codepen.io/605876/turbo-kitty.png"/ alt="Toy Story 2"><span>Toy Story 2 </span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1JE3DNOrqdtcfY3PMw91e35-aNv7-KQd0/view?usp=sharing" target="_blank"><img src="https://assets.codepen.io/605876/css-drawers.png?format=auto" alt="Toy Story 3"/><span>Toy Story 3</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://drive.google.com/file/d/1YKDPbNOeYV-1m4RmLC-WZx8v44MyAiD9/view?usp=sharing" target="_blank"><img src="https://assets.codepen.io/605876/3d-studio-room.png" alt=""/><span>Yo soy Simon </span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://terabox.com/s/1NnGkCyuH6KLso7codSrzmQ" target="_blank"><img src="https://assets.codepen.io/605876/rambear.png"/ alt="Animales fantasticos "><span>Animales fantasticos </span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://terabox.com/s/1Fey_1CFTHiz2A7k4tRVcDQ" target="_blank"><img src="https://assets.codepen.io/605876/care-bear-needs-love.png" alt="Animales Fantasticos "/><span>Animales Fantasticos  2</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://terabox.com/s/1WyZiBI4vorJyY8JA0IGESw" target="_blank"><img src="https://assets.codepen.io/605876/hsl-dimmer.png" alt="Hercules"/><span>Hercules</span></a></li>
+    <li class="item top-picks__item"><a class="item__card box-shadow" href="https://terabox.com/s/1lrgUVLhqSw1B7JRSb5oF7w" target="_blank"><img src="https://assets.codepen.io/605876/tuggable-lightbulb.png" alt="Pride Given "/><span>Pride Given </span></a></li>
+  </ul>
+</div>
+
+<!-- Baitbus 
+https://terabox.com/s/1rWvglu4Kkcc8E-Q7IJSXFA
+
+
+
+DGH 1 al 21 en 1
+
+
+DGH 1 al 18 1x1
+https://drive.google.com/drive/folders/1A17TvLDpd9p1I3jH3TnuqLaSY5B7W8mX?usp=sharing 
+
+DBS 1 Batalla de los dioses
+https://drive.google.com/file/d/1Qo2W2km7iMyTFT3KRykj89TDsBpo2rma/view?usp=sharing
+
+DBS 2 Frezser
+https://drive.google.com/file/d/14DmD5wl6DsFcq9DQNB43aH-Y7iARQX52/view?usp=sharing
+
+DBS 3 Brolly 
+https://drive.google.com/file/d/1q1slGF7AlflGSTWV6AxOYNg3n2YIgZma/view?usp=sharing
+
+https://drive.google.com/file/d/1j2a-CSsFfTtviWbTix97jE9q342wv4Kt/view?usp=sharing
+Avenger end game
+
+
+
+
+
+
+Pokemon Sol y Luna Ultraleyendas Cap 146 tiempo de que mires adelante
+https://terabox.com/s/1GnMCSYOBgpFh-nBGbi5L5g
+
+Pokemon Sol y Luna Ultraleyendas Cap 21 las oportunidades
+https://terabox.com/s/1alNOb9BMpMN4Ic-HIDe8BQ
+
+
+Pokemon Sol y Luna Ultraleyendas Cap 16 su maestro kaulan
+https://terabox.com/s/14rBRH8fvHaEip5w3PtVmSg
+
+RuPaul´s Drag Race Season 13, Las Vegas, Werk the world (1 y 2) 
+https://terabox.com/s/1XkTy2_C2kht47g4N0Tq8PQ  
+Password: r19f
+
+
+
+
+
+
+
+Encanto 
+https://terabox.com/s/1WELVswSVKXd-eul04_MIbQ
+
+Escuadron  Suicida
+https://terabox.com/s/1q2kyBWlkZxP4ms8xtES7rg
+
+Doctor Strange
+https://terabox.com/s/17f4rgRKqG0ptUBB_RP7P7g
+
+
+
+
+https://www.youtube.com/clip/UgkxPgpWR9PzTGZCpNmYhrvasUUq0qKvU9DI
+
+
+
+Capitulos Dragon Ball Super 1-73
+https://drive.google.com/drive/folders/1boat1HLoyPQcMXPufUtwDfTUsZr_ko0f?usp=sharing
+
+
+
+Pokemon Sol y Luna Ultraleyendas Cap 146 tiempo de que mires adelante
+https://terabox.com/s/1GnMCSYOBgpFh-nBGbi5L5g
+
+Pokemon Sol y Luna Ultraleyendas Cap 21 las oportunidades
+https://terabox.com/s/1alNOb9BMpMN4Ic-HIDe8BQ
+
+
+Pokemon Sol y Luna Ultraleyendas Cap 16 su maestro kaulan
+https://terabox.com/s/14rBRH8fvHaEip5w3PtVmSg
+
+RuPaul´s Drag Race Season 13, Las Vegas, Werk the world (1 y 2) 
+https://terabox.com/s/1XkTy2_C2kht47g4N0Tq8PQ  
+Password: r19f
+
+Hercules
+https://terabox.com/s/1WyZiBI4vorJyY8JA0IGESw
+
+Animales Fantasticos 
+https://terabox.com/s/1Fey_1CFTHiz2A7k4tRVcDQ
+
+Encanto 
+https://terabox.com/s/1WELVswSVKXd-eul04_MIbQ
+
+Escuadron  Suicida
+https://terabox.com/s/1q2kyBWlkZxP4ms8xtES7rg
+
+Doctor Strange
+https://terabox.com/s/17f4rgRKqG0ptUBB_RP7P7g
+
+Pride Given 
+https://terabox.com/s/1lrgUVLhqSw1B7JRSb5oF7w
+
+https://www.youtube.com/clip/UgkxPgpWR9PzTGZCpNmYhrvasUUq0qKvU9DI
+
+
+-->
+</body>
+</html>

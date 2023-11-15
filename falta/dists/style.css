@@ -1,0 +1,238 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:800);
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.snip1326 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  color: #bdbdbd;
+  margin: 0px 15px 50px;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip1326 h1,
+.snip1326 h5 {
+  margin: 0;
+  text-transform: uppercase;
+}
+.snip1326 h1 {
+  font-family: 'Fjalla One', Arial, sans-serif;
+  font-size: 2.4em;
+  position: relative;
+}
+.snip1326 h1:before {
+  content: '';
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border: 5px solid #bdbdbd;
+  left: 50%;
+  top: 50%;
+  -webkit-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-transform: rotate(45deg) translate(-50%, -50%);
+  transform: rotate(45deg) translate(-50%, -50%);
+  border-radius: 10%;
+}
+.snip1326 h5 {
+  font-size: 0.7em;
+  font-weight: 800;
+  padding-bottom: 10px;
+  position: relative;
+}
+.snip1326 h5:after {
+  position: absolute;
+  content: '';
+  width: 135px;
+  height: 3px;
+  bottom: -15px;
+  background-color: #bdbdbd;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+.snip1326 .icon {
+  position: relative;
+  display: inline-block;
+}
+.snip1326 .icon:before,
+.snip1326 .icon:after {
+  position: absolute;
+  height: 3px;
+  content: '';
+  background: #bdbdbd;
+  width: 42px;
+  top: 50%;
+}
+.snip1326 .icon:before {
+  left: -50px;
+}
+.snip1326 .icon:after {
+  right: -50px;
+}
+.snip1326 i {
+  font-size: 3.6em;
+  color: #bdbdbd;
+}
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:500);
+@import url(https://fonts.googleapis.com/css?family=Teko:700);
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+.snip1537 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  display: inline-block;
+  color: #bdbdbd;
+  margin: 60px 20px;
+  max-width: 285px;
+  width: 100%;
+  text-align: center;
+  font-size: 3em;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box; 
+}
+
+.snip1537 h1,
+.snip1537 h5 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.snip1537 h1 {
+  font-family: 'Teko', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1em;
+  padding: 0;
+  text-align: center;
+  margin: 0;
+  line-height: 25px;
+}
+
+.snip1537 h5 {
+  background-color: #bdbdbd;
+  color: #212121;
+  display: inline-block;
+  font-size: 0.5em;
+  font-weight: 700;
+  line-height: 36px;
+  padding: 0 35px;
+  position: relative;
+}
+
+.snip1537 h5:before,
+.snip1537 h5:after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0px;
+  border-width: 14px 10px;
+
+  border-style: solid;
+  opacity: 0.8;
+}
+
+.snip1537 h5:before {
+  right: 100%;
+  border-color: #bdbdbd #bdbdbd #bdbdbd transparent;
+}
+
+.snip1537 h5:after {
+  left: 100%;
+  border-color: #bdbdbd transparent #bdbdbd #bdbdbd;
+}
+
+.snip1537 h6 {
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  text-transform: uppercase;
+}
+
+.snip1537 h6:before,
+.snip1537 h6:after {
+  position: absolute;
+  height: 5px;
+  content: '';
+  width: 20px;
+  top: 50%;
+  border-top: 2px solid #bdbdbd;
+  border-bottom: 2px solid #bdbdbd;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.snip1537 h6:before {
+  left: -35px;
+}
+
+.snip1537 h6:after {
+  right: -35px;
+}
+
+.snip1537 i {
+  font-size: 22px;
+  line-height: 36px;
+}
+
+
+/* Demo purposes only */
+
+body {
+  background-color: #212121;
+  text-align: center;
+}
+
+
+.snip1338 {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  color: #bdbdbd;
+  margin: 50px 25px;
+  max-width: 285px;
+  width: 100%;
+  text-align: center;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.snip1338 h1,
+.snip1338 h5 {
+  margin: 0;
+  text-transform: uppercase;
+}
+.snip1338 h1 {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 2em;
+  line-height: 50px;
+  position: relative;
+  padding-left: 56px;
+  border: 5px solid #bdbdbd;
+}
+.snip1338 h5,
+.snip1338 h6 {
+  margin: 7px 0 7px 56px;
+}
+.snip1338 h5 {
+  font-weight: 500;
+  font-size: 1em;
+}
+.snip1338 h6 {
+  display: inline-block;
+  position: relative;  font-size:1.1em;
+}
+.snip1338 i {
+  position: absolute;
+  line-height: 50px;
+  width: 50px;
+  left: 0;
+  border-right: 5px solid #bdbdbd;
+  font-size: 1.1em;
+}

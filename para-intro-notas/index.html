@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Reminders Icon Hover Effect</title>
+  <link rel="stylesheet" href="./style.css">
+  <meta name=viewport content=width=device-width, minimum-scale=1.0, maximum-scale=1.0>
+
+</head>
+<body>
+
+<h1>Reminders icon hover effect</h1>
+<span class="init"></span>
+<p>Recreating the similar effect from original Apple video of OS X Yosemite.</p>
+
+<div id="overlay">
+	<img src="https://s14.postimg.cc/3ny2wo3ch/clouds.png" width="1200" height="670" alt="animated clouds">
+	<img src="https://s14.postimg.cc/3ny2wo3ch/clouds.png" width="1200" height="670" alt="animated clouds" class="clouds-delay">
+</div>
+
+<div id="hover-me"> Hover me
+	<div class="trans" id="base-black"></div>
+	<div class="trans" id="base-white">
+		<div class="border dot-1"><span class="dots orange"></span></div>
+		<span class="line line-1"></span>
+
+		<div class="border dot-2"><span class="dots blu"></span></div>
+		<span class="line line-2"></span>
+
+		<div class="border dot-3"><span class="dots green"></span></div>
+		<span class="line line-3"></span>
+
+		<div class="border dot-4"><span class="dots violet"></span></div>
+		<span class="line line-4"></span>
+		<span class="line line-5"></span>
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

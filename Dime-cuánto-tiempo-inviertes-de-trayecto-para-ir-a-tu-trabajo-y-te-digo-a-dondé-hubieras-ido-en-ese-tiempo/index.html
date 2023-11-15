@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Dime cuánto tiempo inviertes de trayecto para ir a tu trabajo y te digo a dondé hubieras ido en ese tiempo.</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container" id="commute-calculator"> <style>.sr-only {clip: rect(0, 0, 0, 0);border-width:0;height: 1px;margin: -1px;overflow: hidden;padding: 0;position: absolute;white-space: nowrap;width: 1px;}</style> 
+   <div class="row">
+      <div class="col mr-auto ml-auto">
+         <label for="basic-url"><h1>Dime cuánto tiempo inviertes de trayecto para ir a tu trabajo y te digo a dondé hubieras ido en ese tiempo.</h1>
+            <h2 class="sr-only">Dime cuánto tiempo inviertes de trayecto para ir a tu trabajo y te digo qué puedes hacer en durante ese.</h2>
+         </label>
+         <div class="input-group mb-3">
+            <span class="input-group-addon" id="days">Cuántos días a la semana trabajas</span>
+           <input type="number" min="1" max="7" v-model="days" class="form-control" id="days" aria-describedby="days">
+         </div>
+         
+         <div class="input-group mb-3">
+            <span class="input-group-addon" id="weeks">Cuántas semanas al año trabajas</span>
+           <input type="number" min="1" max="52" v-model="weeks" class="form-control" id="weeks" aria-describedby="weeks">
+         </div>
+         
+         <div class="input-group mb-3">
+           <span class="input-group-addon" id="minutes">Tiempo promedio de ir de tu casa a tu trabajo</span>
+           <input type="number" min="1" v-model="travel_time" class="form-control" id="minutes" aria-describedby="minutes">
+           <span class="input-group-addon">minutos</span>
+         </div>
+      </div>
+   </div>
+  
+   <template v-if="weeks > 0 && days > 0 && travel_time > 0">
+      <div class="row custom-card">
+         <div class="col-md-10 mr-auto ml-auto">
+           <h3 class="text-center">
+             Ve algunas equivalencias interesantes de lo que hubieras ( o has realizado) en ese tiempo. <br>
+              <small>Sí calculamos el tiempo de trayecto anual es el equivalente </small>
+           </h3>
+            
+            <br>
+
+           <ul class="list-group">
+              <li class="list-group-item"><strong>{{ total_minutes }}</strong> minutos <span lang="en" class="sr-only">minutes</span></li>
+              <li class="list-group-item" v-if="total_hours > 0"><strong>{{ total_hours }}</strong>horas <span lang="en" class="sr-only">hours</span></li>
+              <li class="list-group-item" v-if="total_days > 0"><strong>{{ total_days }}</strong> días <span lang="en" class="sr-only">days</span></li>
+              <li class="list-group-item" v-if="total_days > 0"><strong>{{ total_weeks }}</strong> semanas <span lang="en" class="sr-only">weeks</span></li>
+
+              <li class="list-group-item" v-if="total_sols > 0"><strong>{{ total_sols }}</strong> días en Marte <span lang="en" class="sr-only">days on Mars</span></li>
+              <li class="list-group-item" v-if="total_neptunes > 0"><strong>{{ total_neptunes }}</strong> días en Neptuno<span lang="en" class="sr-only">days on Neptune</span></li>
+              <li class="list-group-item" v-if="total_nights > 0"><strong>{{ total_nights }}</strong> buenos descansos corridos nocturnos <span lang="en" class="sr-only">good nights' rests</span></li>
+              <li class="list-group-item" v-if="total_podcasts > 0"><strong>{{ total_podcasts }}</strong> episodios de podcast <span lang="en" class="sr-only">podcast episodes</span></li>
+              <li class="list-group-item" v-if="total_audiobooks > 0"><strong>{{ total_audiobooks }}</strong> audiolibros <span lang="en" class="sr-only">audiobooks</span></li>
+              <li class="list-group-item" v-if="total_hangovers > 0"><strong>{{ total_hangovers }}</strong> resacas <span lang="en" class="sr-only">hangovers</span></li>
+              <li class="list-group-item" v-if="total_Windows_loads > 0"><strong>{{ total_Windows_loads }}</strong>  Arranques de escritorios de Windows <span lang="en" class="sr-only">Windows desktops booting up</span></li>
+              <li class="list-group-item" v-if="total_Friends_shows > 0"><strong>{{ total_Friends_shows }}</strong> episodios de <span lang="en">Friends </span><span lang="en" class="sr-only">episodes of Friends</span></li>
+              <li class="list-group-item" v-if="total_GoT_finales > 0"><strong>{{ total_GoT_finales }}</strong> finales de temporada de  <span lang="en">Game of Thrones</span> <span lang="en" class="sr-only">Game of Thrones season finales</span></li>
+              <li class="list-group-item sr-only" v-if="total_scaramuccis > 0"><strong>{{ total_scaramuccis }}</strong> <span lang="en" class="sr-only">Scaramuccis</span></li>
+              <li class="list-group-item sr-only" v-if="total_kardashians > 0"><strong>{{ total_kardashians }}</strong> <span lang="en" class="sr-only">Kardashians</span></li>
+           </ul>
+        </div>
+      </div>
+   </template>
+   <template v-else>
+      <h3 class="mt-4"><!--  Su viaje anual es... -->  </h3>
+   </template>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.4/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>

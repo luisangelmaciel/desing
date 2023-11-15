@@ -1,0 +1,42 @@
+
+.tag {
+  display: flex;
+  border-radius: 5px;
+  font-weight: 400;
+  overflow: hidden;
+}
+.tag--left {
+  position: relative;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 5px;
+  background-color: #FFC900;
+}
+.tag--left::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 5px;
+  height: 2px;
+  background-color: #000;
+}
+.tag--right {
+  position: relative;
+  padding-top: 5px;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-bottom: 5px;
+  background-color: #023760;
+  color: #fff;
+}
+.tag--right::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 5px;
+  height: 2px;
+  background-color: #fff;
+}

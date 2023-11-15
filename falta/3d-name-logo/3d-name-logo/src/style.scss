@@ -1,0 +1,98 @@
+@import "compass/css3";
+
+$titleChars: 10;
+$fnameChars: 3;
+$subtitleChars: 13;
+
+* {
+	border: 0;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+:root {
+	font-size: calc(16px + (48 - 16)*(100vw - 320px)/ (1920 - 320));
+}
+body {
+	background: {
+		image: radial-gradient(2em * $titleChars 2em * $titleChars at center,#242424,#000);
+	};
+	font: 1em Hind, sans-serif;
+	color: #f1f1f1;
+	line-height: 1.5;
+	height: 100vh;
+}
+main {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	margin: auto;
+}
+h1, h2 {
+	line-height: 1;
+	text-transform: uppercase;
+	span {
+		display: inline-block;
+		position: relative;
+		// solid color letters behind gradient ones
+		&:before {
+			content: attr(data-letter);
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		&[data-letter=" "] {
+			width: 0.25em;
+		}
+	}
+}
+h1 {
+	font: {
+		size: 3em;
+		weight: normal;
+	};
+	span {
+		// gradient text
+		background: -webkit-linear-gradient(#fff,#a3a3a3);
+		&:nth-child(-n + #{$fnameChars}) {
+			background: -webkit-linear-gradient(#5785f6,#0c48db);
+		}
+		&, &:nth-child(-n + #{$fnameChars}) {
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+		// “rotate” characters
+		$divisions: 180/($titleChars - 1);
+		@for $t from 1 through $titleChars {
+			$shadowX: -0.08em * sin((-90 + $divisions * ($t - 1)) * pi()/180);
+			&:nth-child(#{$t}):before {
+				@if $t <= $fnameChars {
+					text-shadow: $shadowX 0 #0c48db, $shadowX*2 0 0.05em #000;
+				} @else {
+					text-shadow: $shadowX 0 #969696, $shadowX*2 0 0.05em #000;
+				}
+			}
+		}
+	}
+}
+h2 {
+	color: #5785F6;
+	font-size: 1em;
+	span {
+		// gradient text
+		background: -webkit-linear-gradient(#87a9f9,#2762f3);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		// “rotate” characters
+		$divisions: 180/($subtitleChars - 1);
+		@for $s from 1 through $subtitleChars {
+			$shadowX: -0.08em * sin((-90 + $divisions * ($s - 1)) * pi()/180);
+			&:nth-child(#{$s}):before {
+				text-shadow: $shadowX 0 #2762f3, $shadowX*2 0 0.05em #000;
+			}
+		}
+	}
+}

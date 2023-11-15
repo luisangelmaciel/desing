@@ -1,0 +1,270 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Anurati";
+  src: url("https://assets.codepen.io/1839803/Anurati-Regular.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "nasalization";
+  src: url("https://assets.codepen.io/1839803/nasalization-rg.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.background {
+  /* Location of the image */
+  background-image: url("https://assets.codepen.io/1839803/nathan-anderson-9o-VrJSwGuw-unsplash.jpeg");
+  /* Background image is centered vertically and horizontally at all times */
+  background-position: center center;
+  /* Background image doesn’t tile */
+  background-repeat: no-repeat;
+  /* Background image is fixed in the viewport so that it doesn’t move when
+  the content’s height is greater than the image’s height */
+  background-attachment: fixed;
+  /* This is what makes the background image rescale based
+  on the container’s size */
+  background-size: cover;
+  /* Set a background color that will be displayed
+  while the background image is loading */
+  background-color: #1f1f1f;
+}
+
+/* Extra small devices (from 0/320px up to 600px - default viewport) */
+.app {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.app #cover {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 11;
+  background: linear-gradient(217deg, #0d0715, #2c1424 70.71%), linear-gradient(127deg, #361b14, #332546 70.71%), linear-gradient(336deg, #a26b83, #2c1424 70.71%);
+}
+.app header {
+  position: absolute;
+  width: 100%;
+  height: 10vh;
+  z-index: 9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "Nasalization", sans-serif;
+  padding: 30px;
+  color: #ffffff;
+}
+.app header #logo {
+  font-family: "Nasalization", sans-serif;
+  font-weight: bold;
+  font-size: 2.3rem;
+  letter-spacing: 0.2em;
+  color: #ffffff;
+  cursor: pointer;
+}
+.app header nav {
+  display: flex;
+  align-items: center;
+}
+.app header nav a {
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin: 0 10px;
+  color: #ffffff;
+  cursor: pointer;
+}
+.app header nav i {
+  font-size: 2rem;
+  margin: 0 12px;
+  cursor: pointer;
+}
+.app header #menu-button {
+  display: flex;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.app menu {
+  position: absolute;
+  top: 10vh;
+  width: 100%;
+}
+.app menu .menu-wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 16px 0px;
+}
+.app menu .menu-wrapper > div {
+  padding: 16px;
+  color: #ffffff;
+}
+.app menu .menu-wrapper > div > p {
+  display: flex;
+  justify-content: center;
+  font-family: "Nasalization", sans-serif;
+  font-size: 1.2rem;
+  margin-top: 16px;
+}
+.app .meteoroid-rain .meteoroid {
+  height: 5vh;
+  position: absolute;
+}
+.app .banner-area {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  width: 75%;
+  justify-content: center;
+  z-index: 10;
+  text-align: center;
+  opacity: 0;
+}
+.app .banner-area span {
+  font-family: Anurati, sans-serif;
+  font-size: 3rem;
+  letter-spacing: 0.25em;
+  color: #ffffff;
+}
+.app .hud-area #hud-left {
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  z-index: 12;
+  transform: translate(-50%, -50%);
+  height: 40vh;
+  opacity: 0;
+}
+.app .hud-area #hud-right {
+  position: absolute;
+  top: 50%;
+  right: 40%;
+  z-index: 12;
+  transform: rotateY(180deg) translate(-50%, -50%);
+  height: 40vh;
+  opacity: 0;
+}
+.app #hud-bottom {
+  position: absolute;
+  bottom: 2%;
+  left: 50%;
+  z-index: 12;
+  transform: translate(-50%);
+  width: 50vw;
+  opacity: 0;
+}
+.app #spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 12;
+  transform: translate(-50%, -50%);
+  height: 25vh;
+}
+.app section #scene-container {
+  /* tell our scene container to take up the full page */
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  /*
+    Set the container's background color to the same as the scene's
+    background to prevent flashing on load
+  */
+  background-color: transparent;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .app .banner-area > span {
+    font-size: 3.5rem;
+  }
+}
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .app .banner-area > span {
+    font-size: 4rem;
+  }
+  .app .hud-area #hud-left {
+    opacity: 1;
+  }
+  .app .hud-area #hud-right {
+    opacity: 1;
+  }
+  .app #hud-bottom {
+    opacity: 1;
+  }
+}
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .app .banner-area > span {
+    font-size: 4.5rem;
+  }
+  .app .hud-area #hud-left {
+    opacity: 1;
+  }
+  .app .hud-area #hud-right {
+    opacity: 1;
+  }
+  .app #hud-bottom {
+    opacity: 1;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  #menu-bar {
+    display: none;
+  }
+}
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .app .banner-area > span {
+    font-size: 5rem;
+  }
+  .app .hud-area #hud-left {
+    opacity: 1;
+  }
+  .app .hud-area #hud-right {
+    opacity: 1;
+  }
+  .app #hud-bottom {
+    opacity: 1;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  #menu-bar {
+    display: none;
+  }
+}
+/* Extra extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1400px) {
+  .app .hud-area #hud-left {
+    opacity: 1;
+  }
+  .app .hud-area #hud-right {
+    opacity: 1;
+  }
+  .app #hud-bottom {
+    opacity: 1;
+  }
+
+  #menu-button {
+    display: none;
+  }
+
+  #menu-bar {
+    display: none;
+  }
+}

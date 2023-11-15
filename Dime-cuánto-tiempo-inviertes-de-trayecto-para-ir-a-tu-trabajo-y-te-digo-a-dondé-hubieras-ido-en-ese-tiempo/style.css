@@ -1,0 +1,23 @@
+body {
+  padding: 1rem;
+  color: #fbf6ef;
+  background-color: #222023;
+}
+
+.custom-card {
+  padding: 1.5rem 2rem;
+  color: #222023;
+  background-color: #fbf6ef;
+}
+
+.sr-only {
+  clip: rect(0, 0, 0, 0);
+  border-width: 0;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
