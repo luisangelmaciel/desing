@@ -1,0 +1,407 @@
+body {
+  background: #f5f5f5;
+  -webkit-user-select: none;
+}
+
+.content-container {
+  text-align: center;
+  margin-top: 80px;
+}
+
+.source {
+  text-align: left !important;
+  color: gray;
+  position: fixed;
+  margin: 0 auto;
+}
+
+.feet {
+  width: 70%;
+}
+
+.left-foot {
+  margin-right: 5%;
+  height: auto !important;
+  cursor: pointer;
+}
+
+.right-foot {
+  display: inline-block;
+  height: auto !important;
+  cursor: pointer;
+}
+
+.info {
+  display: inline-block;
+  border: 1px solid;
+  height: 400px;
+  width: 400px;
+  margin-right: 5%;
+  margin-bottom: 2%;
+  background: #fff;
+  box-shadow: inset 0 0 10px #000000;
+}
+
+.source {
+  font-size: 9px;
+  bottom: 0;
+  position: absolute;
+}
+
+.liver {
+  fill: #f8be16;
+  cursor: pointer;
+}
+.liver:hover {
+  fill: #f9cc48;
+}
+
+.spleen {
+  fill: #f19503;
+  cursor: pointer;
+}
+.spleen:hover {
+  fill: #fcab2b;
+}
+
+.small-intestine {
+  fill: #c67d3e;
+  cursor: pointer;
+}
+.small-intestine:hover {
+  fill: #d29865;
+}
+
+.stomach {
+  fill: #a3c518;
+  cursor: pointer;
+  border: 3px solid;
+}
+.stomach:hover {
+  fill: #c1e52b;
+}
+
+.adrenals {
+  fill: #cf7847;
+  cursor: pointer;
+}
+.adrenals:hover {
+  fill: #da966f;
+}
+
+.diaphragm {
+  fill: #b8f6ff;
+  cursor: pointer;
+}
+.diaphragm:hover {
+  fill: #ebfcff;
+}
+
+.elbow {
+  fill: #6e88bf;
+  cursor: pointer;
+}
+.elbow:hover {
+  fill: #91a5cf;
+}
+
+.knee {
+  fill: #516e95;
+  cursor: pointer;
+}
+.knee:hover {
+  fill: #6b88ae;
+}
+
+.lung-chest {
+  fill: #4ac0f0;
+  cursor: pointer;
+}
+.lung-chest:hover {
+  fill: #79d0f4;
+}
+
+.shoulder {
+  fill: #a3b9e2;
+  cursor: pointer;
+}
+.shoulder:hover {
+  fill: #cad7ee;
+}
+
+.solar-plexus {
+  fill: #fceeb9;
+  cursor: pointer;
+}
+.solar-plexus:hover {
+  fill: #fefaea;
+}
+
+.trapezius {
+  fill: #dd7411;
+  cursor: pointer;
+}
+.trapezius:hover {
+  fill: #ef8e32;
+}
+
+.ear {
+  fill: #717bc3;
+  cursor: pointer;
+}
+.ear:hover {
+  fill: #959cd2;
+}
+
+.ascending-colon {
+  fill: #9b6132;
+  cursor: pointer;
+}
+.ascending-colon:hover {
+  fill: #c1793f;
+}
+
+.descending-colon {
+  fill: #9b6132;
+  cursor: pointer;
+}
+.descending-colon:hover {
+  fill: #c1793f;
+}
+
+.eye {
+  fill: #a68dbe;
+  cursor: pointer;
+}
+.eye:hover {
+  fill: #bfadd1;
+}
+
+.esophagus {
+  fill: #44b38f;
+  cursor: pointer;
+}
+.esophagus:hover {
+  fill: #65c5a6;
+}
+
+.thyroid {
+  fill: #22a5dd;
+  cursor: pointer;
+}
+.thyroid:hover {
+  fill: #4eb7e4;
+}
+
+.nose {
+  fill: #b35228;
+  cursor: pointer;
+}
+.nose:hover {
+  fill: #d3693b;
+}
+
+.trapezius {
+  fill: #dd7411;
+  cursor: pointer;
+}
+.trapezius:hover {
+  fill: #ef8e32;
+}
+
+.neck {
+  fill: #eea147;
+  cursor: pointer;
+}
+.neck:hover {
+  fill: #f2b976;
+}
+
+.throat {
+  fill: #e08f2c;
+  cursor: pointer;
+}
+.throat:hover {
+  fill: #e7a758;
+}
+
+.teeth-sinuses {
+  fill: #d080b1;
+  cursor: pointer;
+}
+.teeth-sinuses:hover {
+  fill: #dea5c8;
+}
+
+.head-brain {
+  fill: #e7afcc;
+  cursor: pointer;
+}
+.head-brain:hover {
+  fill: #f3d6e5;
+}
+
+.pituitary {
+  fill: #f5cbdf;
+  cursor: pointer;
+}
+.pituitary:hover {
+  fill: #fdf6f9;
+}
+
+.arm {
+  fill: #5680b2;
+  cursor: pointer;
+}
+.arm:hover {
+  fill: #799ac2;
+}
+
+.armpit {
+  fill: #3d6596;
+  cursor: pointer;
+}
+.armpit:hover {
+  fill: #4f7eb7;
+}
+
+.lower-back {
+  fill: #f0ad9e;
+  cursor: pointer;
+}
+.lower-back:hover {
+  fill: #f7d2ca;
+}
+
+.sciatic-nerve {
+  fill: #ec9486;
+  cursor: pointer;
+}
+.sciatic-nerve:hover {
+  fill: #f3bbb2;
+}
+
+.appendix {
+  fill: #71471b;
+  cursor: pointer;
+}
+.appendix:hover {
+  fill: #9a6125;
+}
+
+.rectum {
+  fill: #71471b;
+  cursor: pointer;
+}
+.rectum:hover {
+  fill: #9a6125;
+}
+
+.bladder {
+  fill: #f6f245;
+  cursor: pointer;
+}
+.bladder:hover {
+  fill: #f8f576;
+}
+
+.pancreas {
+  fill: #8ba832;
+  cursor: pointer;
+}
+.pancreas:hover {
+  fill: #a8c845;
+}
+
+.duodenum {
+  fill: #739a24;
+  cursor: pointer;
+}
+.duodenum:hover {
+  fill: #92c32e;
+}
+
+.cervical-spine {
+  fill: #576996;
+  cursor: pointer;
+}
+.cervical-spine:hover {
+  fill: #7283ae;
+}
+
+.ureter {
+  fill: #f6f245;
+  cursor: pointer;
+}
+.ureter:hover {
+  fill: #f8f576;
+}
+
+.kidney {
+  fill: #f9ec41;
+  cursor: pointer;
+}
+.kidney:hover {
+  fill: #fbf172;
+}
+
+.heart {
+  fill: #ed7876;
+  cursor: pointer;
+}
+.heart:hover {
+  fill: #f3a4a3;
+}
+
+.gall-bladder {
+  fill: #c5ca15;
+  cursor: pointer;
+}
+.gall-bladder:hover {
+  fill: #e3e929;
+}
+
+.leg {
+  fill: #516e95;
+  cursor: pointer;
+}
+.leg:hover {
+  fill: #6b88ae;
+}
+
+.cls-3,
+.cls-40,
+.cls-44 {
+  fill: none;
+  stroke-miterlimit: 10;
+}
+
+.red {
+  stroke: #ff0025;
+}
+
+.cls-40 {
+  stroke: #333;
+}
+
+.cls-43 {
+  font-size: 12px;
+  font-family: Gotham-Black, Gotham;
+  cursor: default;
+}
+
+.cls-43 {
+  stroke: none !important;
+}
+
+g.text-group {
+  fill: #ccc;
+}
+
+path {
+  stroke: #333;
+}
+
+.text-fill {
+  fill: #333;
+}

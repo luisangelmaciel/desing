@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  
+
+    <link rel="apple-touch-icon" type="image/png" href="https://cpwebassets.codepen.io/assets/favicon/apple-touch-icon-5ae1a0698dcc2402e9712f7d01ed509a57814f994c660df9f7a952f3060705ee.png" />
+
+    <meta name="apple-mobile-web-app-title" content="CodePen">
+
+    <link rel="shortcut icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/favicon-aec34940fbc1a6e787974dcd360f2c6b63348d4b1f4e06c77743096d55480f33.ico" />
+
+    <link rel="mask-icon" type="image/x-icon" href="https://cpwebassets.codepen.io/assets/favicon/logo-pin-b4b4269c16397ad2f0f7a01bcdf513a1994f4c94b8af2f191c09eb0d601762b1.svg" color="#111" />
+
+
+
+  
+  
+
+  <title>CodePen - Vintage Ticket</title>
+
+    <link rel="canonical" href="https://codepen.io/sanjib104/pen/VwpqKvy">
+  
+  
+  
+  
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Limelight&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: grid;
+  place-content: center;
+}
+.container .credits {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  transform: rotate(-20deg);
+  width: 5.5rem;
+  height: 5.5rem;
+  font-size: 0.6rem;
+  font-family: "Special Elite", cursive;
+  border-radius: 50%;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.ticket {
+  width: 30rem;
+  height: 15rem;
+  position: relative;
+  transform: rotate(-15deg);
+  border-left: 2px dashed #5a4c23;
+  border-right: 2px dashed #5a4c23;
+  padding: 1.3rem 1.75rem;
+  background-color: #c2b28f;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  background-image: url("https://images.unsplash.com/photo-1532153268424-75fc7e31b665?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=634&q=80");
+  background-blend-mode: darken;
+}
+.ticket::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border-right: 1px solid #5a4c23;
+  background-color: #fff;
+  box-shadow: inset -2px 0 rgba(0, 0, 0, 0.4);
+  transform: translateX(-50%) translateY(-50%);
+}
+.ticket::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  border-right: 1px solid black;
+  background-color: white;
+  box-shadow: inset -2px 0 rgba(0, 0, 0, 0.4);
+  transform: rotateY(180deg) translateX(-50%) translateY(-50%);
+}
+
+.ticket-inner {
+  height: 100%;
+  width: 100%;
+  border: 1px solid #5a4c23;
+  display: flex;
+  justify-content: space-between;
+}
+.ticket-inner .ticket-number {
+  font-family: "Special Elite", cursive;
+  writing-mode: vertical-lr;
+  transform: rotate(180deg);
+  text-align: center;
+  padding: 0 0.5rem;
+  font-size: 2rem;
+}
+.ticket-inner .more-info {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+.ticket-inner .more-info .theater {
+  text-align: center;
+  font-family: "Limelight", cursive;
+}
+.ticket-inner .more-info .theater .theater-name {
+  font-size: 1.85rem;
+}
+.ticket-inner .more-info .regulations {
+  font-size: 0.75rem;
+  font-family: "Special Elite", cursive;
+  padding: 0.75rem 0;
+  border-top: 1px solid #5a4c23;
+  border-bottom: 1px solid #5a4c23;
+}
+.ticket-inner .more-info .price-details {
+  display: flex;
+  justify-content: space-around;
+}
+.ticket-inner .more-info .price-details .admit {
+  font-size: 1.5rem;
+  font-family: "Limelight", cursive;
+}
+.ticket-inner .more-info .price-details .price-details {
+  display: flex;
+  flex-direction: column;
+}
+.ticket-inner .more-info .price-details .price-details .price {
+  font-size: 1.5rem;
+  font-family: "Special Elite", cursive;
+}
+</style>
+
+  <script>
+  window.console = window.console || function(t) {};
+</script>
+
+  
+  
+</head>
+
+<body translate="no">
+  <div class="container">
+  
+  <div class="ticket">
+    <div class="ticket-inner">
+      <p class="ticket-number">2298614</p>
+      
+      <section class="more-info">
+        <div class="theater">
+          <p class="theater-name">Tampa Theater</p>
+          <p class="theater-address">
+            Tampa, Florida
+          </p>
+        </div>
+        
+        <p class="regulations">No refunds for any reason. Ticket must be torn crosswise through the center, one half given to patron, other half retained. Good only date sold.</p>
+        <div class="price-details">
+          <p class="admit">Admit One</p>
+          <div class="price-details">
+            <p>Total</p>
+            <p class="price">20c</p>
+          </div>
+        </div>
+      </section>
+      
+      <p class="ticket-number">2298614</p>
+    </div>    
+  </div>
+
+  <div class="credits">
+    Blend Photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie Spratt</a> on <a href="https://unsplash.com/s/photos/paper-texture?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </div>
+  
+</div>
+  
+  
+  
+</body>
+
+</html>

@@ -1,0 +1,439 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700&display=swap');
+
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0");
+
+*{
+	outline:none;
+	box-sizing:border-box;
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+
+html{
+	box-sizing:border-box;
+}
+
+:root{
+	--font: 'Red Hat Display', sans-serif;
+	--neutral-color: #F0F0F0;
+	--dark-color: #0d1b2a;
+	--light-color: #F5EE9E;
+	--second-color: #1b263b;
+}
+
+body{
+	font-family:var(--font);
+	display: flex;
+	align-items: center;
+	justify-content:center;	
+}
+
+.dashboard{		
+	display:grid;
+	justify-content:center;
+	align-items:start;
+	gap:1em;
+	padding:2em 5vw;	
+	grid-template-columns: repeat(4,1fr); 
+	grid-template-rows: auto;
+	background-color: var(--dark-color);
+	grid-template-areas:
+		"profile profile exercise-table exercise-table"
+		"schedule-table calories exercise-table exercise-table"
+		"personal-bests personal-bests challenges challenges"
+		"activity-feed activity-feed activity-feed activity-feed"
+		"credit-list credit-list credit-list credit-list"
+}
+
+.profile{
+	grid-area: profile;
+	background-image: url("https://images.pexels.com/photos/40751/running-runner-long-distance-fitness-40751.jpeg");
+	background-size:cover;
+	background-repeat: no-repeat;
+	background-position:center;	
+	filter: brightness(1.2);
+	height:20vw;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;	
+	color:var(--dark-color);
+}
+
+.schedule-table{
+	grid-area: schedule-table;
+	background-color: var(--second-color);
+	color: var(--light-color);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:1em;
+	
+	
+	& h2{
+		text-align:center;
+	}
+}
+
+.schedule_list{
+	display:flex;
+	flex-direction:column;
+	align-self:stretch;
+	justify-self:stretch;
+	gap:.5em;
+	}
+
+.schedule_item{
+	display:flex;
+	align-items: center;
+	justify-content: space-between;	
+	border-top:2px solid var(--light-color);
+	border-right:2px solid var(--light-color);
+	border-bottom:2px solid var(--light-color);	
+	border-radius:2em;	
+}
+
+.schedule_container{
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	padding: 0 1em;
+}
+
+.schedule_day{
+	background-color: var(--light-color);
+	color: var(--dark-color);
+	padding:.5em;
+	border-radius:100%;
+	width: 3.3em;
+	height: 3.2em;
+	display:flex;
+	align-items:center;
+	justify-content:center;	
+	font-weight:700;
+}
+
+.material-symbols-rounded{	
+  font-variation-settings:
+  'FILL' 1;	
+}
+
+.exercise-table{
+	grid-area: exercise-table;
+	background-color: var(--second-color);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	 
+	& h2{
+		color:var(--light-color);
+	}
+}
+
+.exercise_list{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	align-self: stretch;	
+	gap:1em;
+	padding: 1em 0;
+}
+
+.video_wrapper{
+	position:relative;
+	max-width:100%;
+	overflow:hidden;
+	
+	
+	& span{
+		display:none;		
+	}
+	
+	&:hover span{
+		display:block;
+		position:absolute;
+		z-index:1;
+		background: rgba(21, 13, 13, 0.44);
+  	color: rgb(255 255 255 / 85%);
+  	padding: 3px 8px;
+  	font-size: 12px;
+  	border-radius: 6px;
+		top:10px;
+		right:5px;
+	}
+	
+	& p{
+		display:flex;
+		position:absolute;
+		background: rgba(21, 13, 13, 0.44);
+		color: var(--light-color);
+		top:0;
+		left:0;
+		height:100%;
+		width:100%;
+		align-items:center;
+		justify-content:center;
+		border-radius:.3em;
+		font-size:1.5em;
+		font-weight:700;
+		text-align:center;
+	}
+	
+	&:hover p{
+		display:none;		
+	}
+}
+
+video{
+	width:100%;
+	height:auto;	
+	border-radius:.5em;
+	display:block;
+}
+
+
+.calories{
+	grid-area: calories;
+	background-color: var(--light-color);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	gap:1em;
+	
+	& h2{
+		color: var(--dark-color);
+	}
+	
+}
+
+.calories_wrapper{
+	background-color:var(--second-color);
+	color:var(--light-color);
+	align-self: stretch;
+	display:flex;
+	flex-direction:column;
+	padding:1em;
+	border-radius:.5em;
+	
+}
+
+.calories_time{
+	font-weight:700;	
+}
+
+.calories_goal{
+	font-weight:300;
+	padding: .2em 0;
+}
+
+.graphic_container{
+	border:2px solid var(--light-color);
+	height:1em;
+	border-radius:2px;
+	display:grid;
+	grid-template-columns: repeat(5,1fr);
+}
+
+.today--1,
+.today--2,
+.today--3,
+.today--4,
+.week--1,
+.week--2,
+.week--3,
+.month--1{
+	background-color:var(--light-color);
+}
+
+.personal-bests{
+	grid-area: personal-bests;
+	background-color: var(--second-color);
+	display:flex;
+	flex-direction:column;
+	align-items:center;	
+	gap: 1em;
+	
+	& h2{
+		color:var(--light-color);
+	}
+}
+
+.personal-bests_wrapper{
+	display:flex;	
+	align-items:center;
+	gap:.5em;	
+	
+}
+	
+.bests_list{
+		display:flex;
+		gap:.5em;
+		
+	& li{
+		border: 2px solid var(--light-color);
+		border-radius:.5em;
+		display:flex;
+		flex-direction:column;
+		align-items:center;		
+		padding:.5em;
+		background-color: var(--light-color);
+		color:var(--dark-color);
+		gap:4px;
+		
+		& .best_title{
+			font-weight:700;
+			text-align:center;
+		}
+	}
+}
+	
+
+
+.challenges{
+	grid-area: challenges;
+	background-image: url('https://images.pexels.com/photos/3077882/pexels-photo-3077882.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+	background-position: center;
+	background-size:cover;
+	filter: brightness(1.2);
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	color:var(--dark-color);
+	
+	& ul{
+		display:flex;
+		flex-direction: column;
+		
+		
+		& li{
+			font-weight:600;
+		}
+	}
+}
+
+.activity-feed{
+	grid-area: activity-feed;
+	background-color:var(--second-color);
+	display:flex;
+	flex-direction:column;
+	align-items:center;
+	
+	& h2{
+		color:var(--light-color);
+	}
+}
+
+.feed_list{
+	display:flex;
+	justify-content:center;
+	align-self:stretch;
+	gap:1em;
+	
+	
+	& li{
+		display:flex;
+		flex-direction:column;
+		align-items:center;
+		width:15vw;
+		background-color: var(--light-color);
+		border-radius:.5em;
+		padding:1em;
+		color:var(--dark-color);
+		gap:4px;
+		
+		& img{
+			width:64px;
+			height:64px;
+			object-fit:cover;
+			border-radius:100%;
+		}
+		
+		& .feed_name{
+			font-weight:700;
+			font-size:1.2em;
+		}
+		
+		& .feed_text{
+			text-align:center;
+			font-weight:300;
+		}
+	}	
+}
+
+.profile,
+.schedule-table,
+.exercise-table,
+.calories,
+.personal-bests,
+.challenges,
+.activity-feed{
+	border-radius: 0.5em;
+	padding:1em;
+	justify-self:stretch;
+	align-self: stretch;
+}
+
+h2{
+		font-size:1.5em;		
+		margin-bottom:0.5em;
+	
+}
+
+.credit_list{
+	grid-area:credit-list;
+	display:flex;
+	gap:8px;
+	
+	& li{
+		border-left:1px solid var(--light-color);
+		padding-left:4px;
+	}	
+	
+	& a{
+		text-decoration:none;
+		color:var(--light-color);
+		display:flex;
+		align-items:center;
+		gap:4px;
+	}
+}
+
+@media screen and (max-width: 575px){
+	.dashboard{
+		display:flex;
+		flex-direction: column;
+	}
+	
+	.profile{
+		height:25vh;
+	}
+	
+	.feed_list{
+		flex-direction:column;
+		align-items:center;		
+		
+	}
+	
+	.video_wrapper{
+		& p{
+			font-size:1em;
+		}
+	}
+}
+
+@media screen and (max-width: 905px){
+	.dashboard{
+		grid-template-areas:
+			"profile profile profile profile"
+			"exercise-table exercise-table exercise-table exercise-table"
+			"schedule-table schedule-table calories calories"
+			"personal-bests personal-bests challenges challenges"
+			"activity-feed activity-feed activity-feed activity-feed"		
+			"credit-list credit-list credit-list credit-list"
+	}
+	
+	.feed_list{
+		& li{
+			width:40vw;
+		}
+	}
+}

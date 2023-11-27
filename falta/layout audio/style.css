@@ -1,0 +1,46 @@
+
+
+.layout-audio {
+ 
+  display: flexbox;
+  align-items: center;
+  justify-content: center;
+text-align: center;
+  font-smooth: auto;
+  font-weight: 300;
+  color: #444;
+}
+.layout-audio figure figcaption { align-items: center;text-align: center;
+  justify-content: center;}
+
+.layout-audio audio {
+  color: #fff;
+}
+
+.layout-audio audio::-webkit-media-controls-panel {
+  background: #70A9A1;
+}
+
+.layout-audio audio::-webkit-media-controls-play-button {
+  color: #fff;
+}
+.layout-audioaudio::-webkit-media-controls-play-button:hover {
+  background-color: teal;
+}
+
+.layout-audio audio::-webkit-media-controls-timeline-container {
+  color: #fff;
+}
+
+.layout-audio audio::-webkit-media-controls-current-time-display {
+  color: #fff;
+}
+
+.layout-audio audio::-webkit-media-controls-time-remaining-display {
+  color: #fff;
+}
+
+.layout-audio audio::-webkit-media-controls-timeline {
+  color: #fff;
+  background: #70A9A1;
+}

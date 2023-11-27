@@ -1,0 +1,33 @@
+// Source: https://blog.typekit.com/2011/07/19/shading-with-css-text-shadows/
+
+$clr1: #445055;
+$clr2: #cdd2d5;
+
+@function shadow($l) {
+  $list: ();
+  @for $i from 1 through $l {
+    $x: $i - 1;
+    $y: $x + 1;
+    $list: append($list, #{$x * -1px} #{$y * 1px} 1px $clr1, 'comma');
+    $list: append($list, #{$y * -1px} #{$x * 1px} 1px $clr2, 'comma');
+  }
+  @return $list;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  margin: 0;
+  
+}
+
+.box {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 5rem;
+  letter-spacing: .5rem;
+  color: deeppink;
+  text-shadow: shadow(8);
+}

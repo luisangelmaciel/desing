@@ -1,0 +1,986 @@
+
+<!doctype html><!--/-->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es-mx" > <![endif]--><!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="es-mx" >        <![endif]--><!--[if IE 8]>    <html class="no-js lt-ie9" lang="es-mx" >               <![endif]--><!--[if gt IE 8]><!-->
+    <html class="no-js" lang="es-mx"><!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="{{author}}">
+    <meta name="description" content="{{description}}">
+    <meta name="generator" content="{{genertor}}">
+    <title>{{title}}</title>
+    <link rel="shortcut icon" href="{{icon}}">   
+    <script src="jquery-1.7.1.js"></script>
+    <script>hsjQuery = window['jQuery'];</script>
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:title" content="{{title}}">
+    <meta name="twitter:description" content="{{twitterDescription}}">
+    <meta name="twitter:title" content="{{twitterTitle}}">    
+    <style>
+        a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+    </style>
+
+    <link rel="stylesheet" href="project.css">
+    <link rel="stylesheet" href="rss_post_listing.css">
+    
+    <!--  Added by GoogleAnalytics integration -->
+    <script>
+    var _hsp = window._hsp = window._hsp || [];
+    _hsp.push(['addPrivacyConsentListener', function(consent) { if (consent.allowed || (consent.categories && consent.categories.analytics)) {
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create','{{GoogleAnalytics}}','auto');
+    ga('send','pageview');
+    }}]);
+    </script>
+    <!-- /Added by GoogleAnalytics integration -->
+    <!--  Added by GoogleAnalytics4 integration -->
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+
+    if (!window._hsGoogleConsentRunOnce) {
+    window._hsGoogleConsentRunOnce = true;
+
+    gtag('consent', 'default', {
+        'ad_storage': 'denied',
+        'analytics_storage': 'denied'
+    });
+
+    var _hsp = window._hsp = window._hsp || [];
+
+    _hsp.push(['addPrivacyConsentListener', function(consent){
+        var hasAnalyticsConsent = consent && (consent.allowed || (consent.categories && consent.categories.analytics));
+        var hasAdsConsent = consent && (consent.allowed || (consent.categories && consent.categories.advertisement));
+
+        gtag('consent', 'update', {
+        'ad_storage': hasAdsConsent ? 'granted' : 'denied',
+        'analytics_storage': hasAnalyticsConsent ? 'granted' : 'denied'
+        });
+    }]);
+    }
+
+    gtag('js', new Date());
+    gtag('set', 'developer_id.dZTQ1Zm', true);
+    gtag('config', '{{GoogleAnalytics4}}');
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id={{GoogleAnalytics4}}"></script>
+    <!-- /Added by GoogleAnalytics4 integration -->
+
+    <!--  Added by GoogleTagManager integration -->
+    <script>
+    var _hsp = window._hsp = window._hsp || [];
+
+    var hsLoadGtm = function loadGtm() {
+        if(window._hsGtmLoadOnce) {
+        return;
+        }
+
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GoogleTagManager');
+
+        window._hsGtmLoadOnce = true;
+    };
+
+    var useGoogleConsentMode = false;
+
+    if (!useGoogleConsentMode){
+        _hsp.push(['addPrivacyConsentListener', function(consent){
+        if(consent.allowed || (consent.categories && consent.categories.analytics)){
+            hsLoadGtm();
+        }
+    }]);
+    } else{
+        if(!window._hsGoogleConsentRunOnce){
+        window._hsGoogleConsentRunOnce=true;
+
+        window.dataLayer=window.dataLayer||[];
+        function gtag(){dataLayer.push(arguments);}
+
+        gtag('consent','default',{
+            'ad_storage':'denied',
+            'analytics_storage':'denied'
+        });
+
+        gtag('set','developer_id.{{idDeveloper}}',true);
+
+        _hsp.push(['addPrivacyConsentListener',function(consent){
+        var hasAnalyticsConsent=consent&&(consent.allowed||(consent.categories&&consent.categories.analytics));
+        var hasAdsConsent=consent&&(consent.allowed||(consent.categories&&consent.categories.advertisement));
+
+        gtag('consent','update',{
+            'ad_storage':hasAdsConsent?'granted':'denied',
+            'analytics_storage':hasAnalyticsConsent?'granted':'denied'
+        });
+        }]);
+    }
+
+    hsLoadGtm();
+    }
+    </script>
+    <!-- /Added by GoogleTagManager integration -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Global site tag (gtag.js) - Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GoogleAnalytics4"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'GoogleAnalytics4');
+    </script>
+
+    <!-- /Yandex.Metrika counter -->
+    <script type="text/javascript">
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+    m[i].l=1*new Date();
+    for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+    k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym({{YandexMetrika}}, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true,
+            webvisor:true,
+            ecommerce:"dataLayer"
+    });
+    </script>
+
+    <!-- Hotjar Tracking Code -->
+    <script>
+        (function(h,o,t,j,a,r){
+            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
+            h._hjSettings={hjid:{{hotjar}},hjsv:6};
+            a=o.getElementsByTagName('head')[0];
+            r=o.createElement('script');r.async=1;
+            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
+            a.appendChild(r);
+        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
+    </script>
+
+    <link rel="amphtml" href="{{url}}?hs_amp=true">
+    <meta property="og:image" content="{{ogImage}}#keepProtocol">
+    <meta property="og:image:width" content="{{width}}">
+    <meta property="og:image:height" content="{{height}}">
+    <meta property="og:image:alt" content="{{alt}}">
+    <meta name="twitter:image" content="{{ogImage}}#keepProtocol">
+    <meta name="twitter:image:alt" content="{{alt}}">
+
+    <meta property="og:url" content="{{url}}">
+    <meta name="twitter:card" content="{{card}}">
+    <link rel="canonical" href="{{canonniaal}}">
+
+    <meta property="og:type" content="article">
+    <link rel="alternate" type="application/rss+xml" href="rss.xml">
+    <meta name="twitter:domain" content="{{twitter}}">
+    <script src="//platform.linkedin.com/in.js" type="text/javascript">
+        lang: es_ES
+    </script>
+    <meta http-equiv="content-language" content="es-mx">
+    <link rel="stylesheet" href="layout.min.css">
+    <link rel="stylesheet" href="bolt.css">
+</head>
+<script type="application/ld+json" class="yoast-schema-graph">
+	{
+		"@context": "https://schema.org",
+		"@graph": [{
+			"@type": "CollectionPage",
+			"@id": "https://thenewstack.io/cloud-native/",
+			"url": "https://thenewstack.io/cloud-native/",
+			"name": "Cloud Native Ecosystem News and Resources | The New Stack",
+			"isPartOf": {
+				"@id": "https://thenewstack.io/#website"
+			},
+			"primaryImageOfPage": {
+				"@id": "https://thenewstack.io/cloud-native/#primaryimage"
+			},
+			"image": {
+				"@id": "https://thenewstack.io/cloud-native/#primaryimage"
+			},
+			"thumbnailUrl": "https://cdn.thenewstack.io/media/2023/10/42689346-piggybank.jpg",
+			"description": "Cloud native technologies allow teams to build and manage services without worrying about servers. Read our articles to learn more about cloud native tools.",
+			"breadcrumb": {
+				"@id": "https://thenewstack.io/cloud-native/#breadcrumb"
+			},
+			"inLanguage": "en-US"
+		}, {
+			"@type": "ImageObject",
+			"inLanguage": "en-US",
+			"@id": "https://thenewstack.io/cloud-native/#primaryimage",
+			"url": "https://cdn.thenewstack.io/media/2023/10/42689346-piggybank.jpg",
+			"contentUrl": "https://cdn.thenewstack.io/media/2023/10/42689346-piggybank.jpg",
+			"width": 1920,
+			"height": 1118
+		}, {
+			"@type": "BreadcrumbList",
+			"@id": "https://thenewstack.io/cloud-native/#breadcrumb",
+			"itemListElement": [{
+				"@type": "ListItem",
+				"position": 1,
+				"name": "Home",
+				"item": "https://thenewstack.io/"
+			}, {
+				"@type": "ListItem",
+				"position": 2,
+				"name": "Cloud Native Ecosystem"
+			}]
+		}, {
+			"@type": "WebSite",
+			"@id": "https://thenewstack.io/#website",
+			"url": "https://thenewstack.io/",
+			"name": "The New Stack",
+			"description": "",
+			"publisher": {
+				"@id": "https://thenewstack.io/#organization"
+			},
+			"potentialAction": [{
+				"@type": "SearchAction",
+				"target": {
+					"@type": "EntryPoint",
+					"urlTemplate": "https://thenewstack.io/?s={search_term_string}"
+				},
+				"query-input": "required name=search_term_string"
+			}],
+			"inLanguage": "en-US"
+		}, {
+			"@type": "Organization",
+			"@id": "https://thenewstack.io/#organization",
+			"name": "The New Stack",
+			"url": "https://thenewstack.io/",
+			"logo": {
+				"@type": "ImageObject",
+				"inLanguage": "en-US",
+				"@id": "https://thenewstack.io/#/schema/logo/image/",
+				"url": "https://cdn.thenewstack.io/media/2021/11/a9fbec84-the-new-stack-logo-rgb-screen.png",
+				"contentUrl": "https://cdn.thenewstack.io/media/2021/11/a9fbec84-the-new-stack-logo-rgb-screen.png",
+				"width": 1032,
+				"height": 128,
+				"caption": "The New Stack"
+			},
+			"image": {
+				"@id": "https://thenewstack.io/#/schema/logo/image/"
+			},
+			"sameAs": ["https://www.facebook.com/thenewstack", "https://twitter.com/thenewstack"]
+		}]
+	}
+</script>
+
+<script id="category-article-schema" type="application/ld+json">
+	{
+		"@context": "https://schema.org",
+		"@type": "Article",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": "{{url or metadata.url}}"
+		},
+		"headline": "Cloud Native Ecosystem",
+		"description": "Cloud native technologies help companies scale in creating unique applications that thrive in hybrid, private or multicloud environments. Cloud native applications expand the flexibility and elasticity that the cloud offers. Discover more about how the cloud native ecosystem works here.
+		",
+		"publisher": {
+			"@type": "Organization",
+			"name": "The New Stack"
+		}
+	}
+</script>
+
+<body class="blog   hs-content-id-5946242995 hs-blog-post hs-blog-id-5328274591" style="">
+<!--  Added by GoogleTagManager integration -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id={{GoogleTagManager}}" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- /Added by GoogleTagManager integration -->
+<div class="header-container-wrapper">
+  <div class="header-container container-fluid">
+  <div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+  <div class="row-fluid ">
+  <div class="span12 widget-span widget-type-global_group " style="" data-widget-type="global_group" data-x="0" data-w="12">
+  <div class="" data-global-widget-path="generated_global_groups/5304316544.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+  <div class="row-fluid ">
+  <div class="span12 widget-span widget-type-cell container-medium" style="" data-widget-type="cell" data-x="0" data-w="12">
+  <div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+  <div class="row-fluid ">
+  <div class="span7 widget-span widget-type-logo logo" style="" data-widget-type="logo" data-x="0" data-w="7">
+  <div class="cell-wrapper layout-widget-wrapper">
+  <span id="hs_cos_wrapper_module_1532726385223101" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_logo" style="" data-hs-cos-general-type="widget" data-hs-cos-type="logo"><a href="//posgrado.anahuacmayab.mx" id="hs-link-module_1532726385223101" style="border-width:0px;border:0px;"><img src="https://merida.anahuac.mx/hubfs/posgrado%20logo.svg" class="hs-image-widget " height="136" style="height: auto;width:992px;border-width:0px;border:0px;" width="992" alt="posgrado logo" title="posgrado logo"></a></span></div><!--end layout-widget-wrapper -->
+  </div><!--end widget-span -->
+  <div class="span5 widget-span widget-type-raw_html btn-email" style="" data-widget-type="raw_html" data-x="7" data-w="5">
+  <div class="cell-wrapper layout-widget-wrapper">
+  <span id="hs_cos_wrapper_module_1532726385223102" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><a href="/posgrado/contacta-un-asesor"><span class="ctc-txt">Aplica</span></a></span>
+  </div><!--end layout-widget-wrapper -->
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  </div>
+  </div><!--end widget-span -->
+  </div><!--end row-->
+  </div><!--end row-wrapper -->
+  </div><!--end header -->
+ </div><!--end header wrapper -->
+
+<div class="body-container-wrapper">
+<div class="body-container container-fluid">
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_group container menu-section" style="" data-widget-type="global_group" data-x="0" data-w="12">
+<div class="" data-global-widget-path="generated_global_groups/5304316770.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-menu custom-menu-primary" style="" data-widget-type="menu" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_1502900991821128" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_1502900991821128" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="menu posgrados" data-menu-id="41822589003" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="/oferta-educativa" aria-haspopup="true" aria-expanded="false" role="menuitem"><span style="--delay: 0.30s;">Oferta Educativa</span></a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/licenciaturas/" role="menuitem">Licenciaturas</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/posgrado" role="menuitem">Posgrado</a></li>  
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="/nosotros" aria-haspopup="true" aria-expanded="false" role="menuitem"><span style="--delay: 0.35s;">Nosotros</span></a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/nosotros/modelo-educativo" role="menuitem">Modelo Anáhuac</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/defensoria-anahuac" role="menuitem">Defensoría Anáhuac</a></li>  
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="/admisiones" aria-haspopup="true" aria-expanded="false" role="menuitem"><span style="--delay: 0.40s;">Admisiones</span></a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/licenciaturas/admision/proceso-de-admision" role="menuitem">Admisiones Licenciaturas</a></li>  
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/es/licenciaturas/costos-y-becas/costos" role="menuitem">Costos Licenciaturas</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="/internacional" role="menuitem" target="_blank" rel="noopener"><span style="--delay: 0.45s;">Internacional</span></a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="/vida/" aria-haspopup="true" aria-expanded="false" role="menuitem"><span style="--delay: 0.50s;">Vida Universitaria</span></a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/vida/cultura" role="menuitem">Arte y Cultura</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/vida/deportes" role="menuitem">Deportes</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/vida/servicio-social" role="menuitem">Acción Social</a></li>
+   </ul></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="/emprendimiento" role="menuitem"><span style="--delay: 0.55s;">Emprendimiento</span></a></li>
+  <li class="hs-menu-item hs-menu-depth-1 hs-item-has-children" role="none"><a href="javascript:;" aria-haspopup="true" aria-expanded="false" role="menuitem"><span style="--delay:0.60s;">Anáhuac</span></a>
+   <ul role="menu" class="hs-menu-children-wrapper">
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/herramientas-para-alumnos" role="menuitem">Alumnos </a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/egresados" role="menuitem">Egresados</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/investigacion" role="menuitem">Investigación </a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/noticias" role="menuitem">Noticias</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/eventos" role="menuitem">Eventos</a></li>
+    <li class="hs-menu-item hs-menu-depth-2" role="none"><a href="/directorio" role="menuitem">Directorio</a></li>
+   </ul></li>
+ </ul>
+</div></span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div>
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell title-background padding20tb" style="background: #fafafa;" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_jinja hs-blog-header" style="" data-widget-type="raw_jinja" data-x="0" data-w="12">
+<h1><a href="/posgrado/blog" style="color:#000000">Blog de Posgrado</a></h1>
+<h5><a href="" style="color:#000000;text-transform: uppercase;"></a></h5></div><!--end widget-span -->
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page-center content-wrapper padding40tb" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span8 widget-span widget-type-cell blog-content" style="" data-widget-type="cell" data-x="0" data-w="8">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-blog_content " style="" data-widget-type="blog_content" data-x="0" data-w="12">
+<div class="blog-section">
+    <div class="blog-post-wrapper cell-wrapper">
+        <div class="section post-header clearfix">
+            <h2><span id="hs_cos_wrapper_name" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="text">{{title}}</span></h2>
+            <p id="hubspot-author_data" class="hubspot-editable" data-hubspot-form-id="author_data" data-hubspot-name="Blog Author">
+                    <i class="fa fa-calendar"></i> {{date}} / by                    
+                        <a class="author-link" href="{{author}}">{{author}}</a>                                                                   
+            </p>
+            <div class="social-sharing-wrapper">
+                <span id="hs_cos_wrapper_blog_social_sharing" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_blog_social_sharing" style="" data-hs-cos-general-type="widget" data-hs-cos-type="blog_social_sharing">
+<div class="hs-blog-social-share">
+    <ul class="hs-blog-social-share-list">
+        
+        <li class="hs-blog-social-share-item hs-blog-social-share-item-twitter">
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-url="{{url}}" data-size="medium" data-text="{{title}}">Tweet</a>
+        </li>
+        
+        
+        <li class="hs-blog-social-share-item hs-blog-social-share-item-linkedin">
+            <script type="IN/Share" data-url="{{url}}" data-showzero="true" data-counter="right"></script>
+        </li>
+        
+        
+        <li class="hs-blog-social-share-item hs-blog-social-share-item-facebook">
+            <div class="fb-like" data-href="{{url}} data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" data-width="120"></div>
+        </li>
+        
+    </ul>
+ </div>
+
+</span>
+            </div>
+        </div>
+        
+        <div class="section post-body">
+            <span id="hs_cos_wrapper_post_body" class="hs_cos_wrapper hs_cos_wrapper_meta_field hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="meta_field" data-hs-cos-type="rich_text"><p><img src="https://merida.anahuac.mx/hs-fs/hubfs/Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png?width=655&amp;name=Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png" alt="Terapia sistémica familiar qué es y cómo ayuda a los psicólogos" width="655" style="background-color: transparent; width: 655px;" srcset="https://merida.anahuac.mx/hs-fs/hubfs/Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png?width=328&amp;name=Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png 328w, https://merida.anahuac.mx/hs-fs/hubfs/Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png?width=655&amp;name=Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png 655w, https://merida.anahuac.mx/hs-fs/hubfs/Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png?width=983&amp;name=Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png 983w, https://merida.anahuac.mx/hs-fs/hubfs/Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png?width=1310&amp;name=Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png 1310w, https://merida.anahuac.mx/hs-fs/hubfs/Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png?width=1638&amp;name=Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png 1638w, https://merida.anahuac.mx/hs-fs/hubfs/Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png?width=1965&amp;name=Terapia%20sist%C3%A9mica%20familiar%20qu%C3%A9%20es%20y%20c%C3%B3mo%20ayuda%20a%20los%20psic%C3%B3logos.png 1965w" sizes="(max-width: 655px) 100vw, 655px"></p>
+<p>En los últimos años, la sociedad mexicana ha sufrido cambios drásticos en las dinámicas familiares.</p>
+<p>La resistencia a formar relaciones estables, la disminución de la fecundidad, las uniones consensuales y el divorcio, son solo algunos de los <span style="font-weight: bold;">factores de dichas transformaciones progresivas en los comportamientos y dinámicas familiares</span>.</p>
+<!--more-->
+<p>Todas las variables anteriores han traído consigo diversas problemáticas, entre las que se encuentra la violencia intrafamiliar.</p>
+<p>En nuestro país,<span style="font-weight: bold;"> más de dos quintas partes de los hombres han ejercido algún tipo de violencia en contra de sus parejas o hijos</span>, lo que lo convierte en un problema que impacta de manera negativa en la formación de personas íntegras y saludables.</p>
+<p>Sin embargo, como psicólogos, es posible aportar un granito de arena a la solución de este problema a través de la terapia sistémica familiar. Este tipo de terapia nos permite trabajar en las siguientes áreas:</p>
+<ul>
+<li>Núcleos familiares en organizaciones civiles.</li>
+<li>Instituciones gubernamentales.</li>
+<li>Práctica privada.</li>
+</ul>
+<p style="text-align: center;">&nbsp;</p>
+<p style="text-align: center;">Otros artículos relacionados:</p>
+<p style="text-align: center;"><a href="/posgrado/blog/recomendaciones-bienestar-laboral" rel="noopener" target="_blank"><span style="text-decoration: underline;"><span style="font-weight: bold;"> &lt; 5 recomendaciones prácticas para tu bienestar laboral &gt;</span></span></a></p>
+<p style="text-align: left;">&nbsp;</p>
+<h2 style="text-align: left;"><span style="font-weight: bold;">¿Qué es la terapia sistémica familiar?</span><span style="text-decoration: underline;"><span style="font-weight: bold;"><br></span></span></h2>
+<p><span style="font-weight: normal;">“La terapia sistémica no reinventa lo que la naturaleza ha creado, pero sí por medio de ella se logra conocer cómo operan los organismos, controlar la ansiedad y aprender a adaptarse mejor a los momentos afortunados y desafortunados de la vida, la terapia estaría dando a la naturaleza más probabilidades de éxito”.</span><br><span style="font-weight: normal;">- Murray Bowen, 1978.</span><span style="font-weight: bold;"><br></span></p>
+<p><span style="font-weight: normal;">Es hora de recordar algunos apuntes de nuestras clases: la terapia sistémica familiar nace del enfoque sistémico y <span style="font-weight: bold;">considera que los comportamientos humanos son el producto de complejas interacciones que los individuos mantienen dentro de un grupo</span>, es decir, un sistema.<br></span></p>
+<p><span style="font-weight: normal;">Pueden existir diversos sistemas e interacciones, pero el más influyente siempre es el que está conformado por las familias nucleares y extensas de una persona.<br></span></p>
+<h2><span style="font-weight: normal;"><span style="font-weight: bold;">Origen de la terapia sistémica familiar</span><br></span></h2>
+<p><span style="font-weight: normal;">Algunos psicólogos como Murray Bowen, consideraron que la única manera de entender el comportamiento humano es conociendo las características de las relaciones que los miembros de la familia extensa de un individuo han establecido en generaciones anteriores.<br></span></p>
+<p><span style="font-weight: normal;"><span style="font-weight: bold;">Este enfoque mantiene una perspectiva holística e integradora</span>: lo importante son las relaciones que una persona mantiene y los componentes que surgen a partir de éstas.</span></p>
+<p><span style="font-weight: normal;">La terapia sistémica nace a principios de la década de los años 50, época en la que John Bell, profesor de psicología de la Universidad de Clark, realizó una terapia conjunta con toda la familia de un joven con conductas agresivas y obtuvo excelentes resultados. Este fue el precedente de un enfoque y praxis que <span style="font-weight: bold;">se enfoca en la intervención y el tratamiento de la familia en conjunto.<br></span></span></p>
+<p style="text-align: center; font-weight: normal;">También te puede interesar:</p>
+<p style="text-align: center;"><span style="font-weight: normal;"><span style="font-weight: bold;"><a href="/posgrado/blog/comunicacion-efectiva" rel="noopener" target="_blank"><span style="text-decoration: underline;">&lt;Comunicación efectiva: ¿Cómo aplicarla con tu equipo de trabajo?&gt;</span></a><br></span></span></p>
+<p style="text-align: left;">&nbsp;</p>
+<h2 style="text-align: left;"><span style="font-weight: normal;"><span style="font-weight: bold;">¿Cuáles son los objetivos de la terapia sistémica familiar?</span></span></h2>
+<p><span style="font-weight: normal;">La terapia sistémica familiar tiene como objetivo encontrar solución a los problemas prácticos y reales dentro de las dinámicas familiares. Con este enfoque los psicólogos y terapeutas nos olvidamos de realizar un diagnóstico, o identificar quién tiene un problema. En cambio, trabajamos por reconocer los patrones disfuncionales dentro del comportamiento de las familias que acuden a nosotros.<span style="font-weight: bold;"><br></span></span></p>
+<p>Podemos decir que sus principales objetivos son:</p>
+<ul>
+<li>Mejorar el funcionamiento de las familias.</li>
+<li>Aumentar la comprensión mutua.</li>
+<li>Estimular el apoyo emocional entre los miembros del sistema familiar.</li>
+<li>Desarrollar estrategias de afrontamiento y habilidades de resolución de problemas específicos.</li>
+</ul>
+<p>&nbsp;</p>
+<h2>¿En qué situaciones podemos utilizar la terapia sistémica familiar?</h2>
+<p>Una vez que hayamos desarrollado nuestros conocimientos y habilidades en terapia familiar podremos aplicarla en la solución de problemas reales como:</p>
+<ul>
+<li>Crisis familiares.</li>
+<li>Terapia de pareja.</li>
+<li>Problemas de conducta o <a href="https://www.psicologiacientifica.com/terapia-familiar-sistemica-tratamiento-tdah/" rel="noopener" target="_blank"><strong>trastornos de un miembro de la familia</strong></a>.</li>
+<li>Tratamiento de adicciones.</li>
+<li>Psicoeducación.</li>
+<li>Entrenamiento para padres.</li>
+</ul>
+<p>Recordando lo que dijimos al inicio de este artículo: los psicólogos podemos<span style="font-weight: bold;"> desarrollar habilidades y aplicar conocimientos</span> que contribuyan a la mejora de las dinámicas familiares mexicanas y con esto, establecer el primer paso para desarrollar un mejor país. Si tu objetivo es aportar a este ámbito, <a href="/posgrado/maestria/psicologia-y-educacion?hsCtaTracking=7ff689b0-7ee9-4f43-8600-be020fe88356%7Cfb5610ec-995e-43a4-b27f-fd6a0ab5c0db" rel="noopener" target="_blank"><span style="font-weight: bold;">te invitamos a que conozcas nuestra oferta educativa de Posgrados en Psicología.</span></a></p>
+<p style="text-align: left;"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-d932c56c-ee63-4f08-9716-c64b80e01be3"><span class="hs-cta-node hs-cta-d932c56c-ee63-4f08-9716-c64b80e01be3" id="hs-cta-d932c56c-ee63-4f08-9716-c64b80e01be3"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/3416190/d932c56c-ee63-4f08-9716-c64b80e01be3" target="_blank" rel="noopener"><img class="hs-cta-img" id="hs-cta-img-d932c56c-ee63-4f08-9716-c64b80e01be3" style="border-width:0px;" height="530" width="1440" src="https://no-cache.hubspot.com/cta/default/3416190/d932c56c-ee63-4f08-9716-c64b80e01be3.png" alt="Nueva llamada a la acción"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(3416190, 'd932c56c-ee63-4f08-9716-c64b80e01be3', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></p></span>
+        </div>
+        
+        <div class="social-sharing-wrapper" style="margin-top:30px;">
+            <span id="hs_cos_wrapper_blog_social_sharing" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_blog_social_sharing" style="" data-hs-cos-general-type="widget" data-hs-cos-type="blog_social_sharing">
+<div class="hs-blog-social-share">
+    <ul class="hs-blog-social-share-list">
+        
+        <li class="hs-blog-social-share-item hs-blog-social-share-item-twitter">
+            <!-- Twitter social share -->
+            <a href="https://twitter.com/share" class="twitter-share-button" data-lang="es" data-url="{{url}}" data-size="medium" data-text="Terapia sistémica familiar: qué es y cómo ayuda a los psicólogos">Tweet</a>
+        </li>
+        
+
+        
+        <li class="hs-blog-social-share-item hs-blog-social-share-item-linkedin">
+            <!-- LinkedIn social share -->
+            <script type="IN/Share" data-url="{{url}}" data-showzero="true" data-counter="right"></script>
+        </li>
+        
+
+        
+        <li class="hs-blog-social-share-item hs-blog-social-share-item-facebook">
+            <!-- Facebook share -->
+            <div class="fb-like" data-href="{{url}}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true" data-width="120"></div>
+        </li>
+        
+    </ul>
+ </div>
+
+</span>
+        </div>
+            
+        
+
+        <div class="about-author-sec row-fluid">
+            <div class="span2">
+                <img width="100" height="100" alt="Posgrado Anáhuac Mayab" src="https://merida.anahuac.mx/hs-fs/hubfs/Anahuac%20A_Mesa%20de%20trabajo%201.png?width=100&amp;height=100&amp;name=Anahuac%20A_Mesa%20de%20trabajo%201.png" srcset="https://merida.anahuac.mx/hs-fs/hubfs/Anahuac%20A_Mesa%20de%20trabajo%201.png?width=50&amp;height=50&amp;name=Anahuac%20A_Mesa%20de%20trabajo%201.png 50w, https://merida.anahuac.mx/hs-fs/hubfs/Anahuac%20A_Mesa%20de%20trabajo%201.png?width=100&amp;height=100&amp;name=Anahuac%20A_Mesa%20de%20trabajo%201.png 100w, https://merida.anahuac.mx/hs-fs/hubfs/Anahuac%20A_Mesa%20de%20trabajo%201.png?width=150&amp;height=150&amp;name=Anahuac%20A_Mesa%20de%20trabajo%201.png 150w, https://merida.anahuac.mx/hs-fs/hubfs/Anahuac%20A_Mesa%20de%20trabajo%201.png?width=200&amp;height=200&amp;name=Anahuac%20A_Mesa%20de%20trabajo%201.png 200w, https://merida.anahuac.mx/hs-fs/hubfs/Anahuac%20A_Mesa%20de%20trabajo%201.png?width=250&amp;height=250&amp;name=Anahuac%20A_Mesa%20de%20trabajo%201.png 250w, https://merida.anahuac.mx/hs-fs/hubfs/Anahuac%20A_Mesa%20de%20trabajo%201.png?width=300&amp;height=300&amp;name=Anahuac%20A_Mesa%20de%20trabajo%201.png 300w" sizes="(max-width: 100px) 100vw, 100px"> 
+            </div>
+            <div class="span10">
+                <h4>Written by <a class="author-link" href="#/blog/author/posgrado-anáhuac-mayab">Posgrado Anáhuac Mayab</a></h4>         
+                <p></p>
+                 
+            </div>           
+        </div>
+        
+    </div>
+</div></div>
+
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1635875450765209" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div id="" class="span12 " style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; background-color: #; background-image: url(''); background-repeat: repeat; background-position: top; background-size: auto; background-attachment: scroll;">
+    
+    <div class="container-medium">
+        
+        <div class="span12" style="" data-widget-type="rich_text" data-x="0" data-w="12">
+            
+            
+        
+        <!-- end span -->
+        </div>
+    
+    <!-- end container -->
+    </div>
+
+<!-- end span -->
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-9 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1635875502334224" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div id="" class="span12 " style="margin-top: 0px; margin-bottom: 0px; padding-top: 0px; padding-bottom: 0px; background-color: #; background-image: url(''); background-repeat: repeat; background-position: top; background-size: auto; background-attachment: scroll;">
+    
+    <div class="container-medium">
+        
+        <div class="span12" style="" data-widget-type="rich_text" data-x="0" data-w="12">
+            
+            <p><strong>Otros artículos relacionados:</strong></p>
+<ul>
+<li><strong><a href="#/blog/que-es-un-posgrado-para-que-sirve" rel="noopener" target="_blank">¿Qué es un posgrado y para</a><a href="#/blog/que-es-un-posgrado-para-que-sirve" rel="noopener" target="_blank"><span>&nbsp;</span>q</a><a href="#/blog/que-es-un-posgrado-para-que-sirve" rel="noopener" target="_blank">ué</a><a href="#/blog/que-es-un-posgrado-para-que-sirve" rel="noopener" target="_blank"><span>&nbsp;</span>sirve?</a></strong></li>
+<li><strong><a href="#/blog/soft-skills-estudiar-posgrado" rel="noopener" target="_blank">Soft Skills que puedes adquirir al estudiar un Posgrado</a></strong></li>
+<li><a href="#/blog/habilidades-gerenciales-todo-gerente-debe-tener" rel="noopener" target="_blank"><strong>5 habilidades gerenciales que todo Gerente debe tener</strong></a></li>
+<li><strong><a href="#/blog/razones-estudiar-posgrado-anahuac-mayab" rel="noopener" target="_blank">7 razones para estudiar un Posgrado en la Anáhuac Mayab</a></strong></li>
+</ul>
+        
+        <!-- end span -->
+        </div>
+    
+    <!-- end container -->
+    </div>
+
+<!-- end span -->
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-cell blog-sidebar" style="" data-widget-type="cell" data-x="8" data-w="4">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-10 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-11 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cta " style="" data-widget-type="cta" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_150764909036993" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_cta" style="" data-hs-cos-general-type="widget" data-hs-cos-type="cta"><!--HubSpot Call-to-Action Code --><span class="hs-cta-wrapper" id="hs-cta-wrapper-30eeda36-8de7-4838-8f4a-d4499bccf4cc"><span class="hs-cta-node hs-cta-30eeda36-8de7-4838-8f4a-d4499bccf4cc" id="hs-cta-30eeda36-8de7-4838-8f4a-d4499bccf4cc"><!--[if lte IE 8]><div id="hs-cta-ie-element"></div><![endif]--><a href="https://cta-redirect.hubspot.com/cta/redirect/3416190/30eeda36-8de7-4838-8f4a-d4499bccf4cc" target="_blank" rel="noopener"><img class="hs-cta-img" id="hs-cta-img-30eeda36-8de7-4838-8f4a-d4499bccf4cc" style="border-width:0px;" height="1385" width="900" src="https://no-cache.hubspot.com/cta/default/3416190/30eeda36-8de7-4838-8f4a-d4499bccf4cc.png" alt="Nueva llamada a la acción"></a></span><script charset="utf-8" src="/hs/cta/cta/current.js"></script><script type="text/javascript"> hbspt.cta._relativeUrls=true;hbspt.cta.load(3416190, '30eeda36-8de7-4838-8f4a-d4499bccf4cc', {"useNewLoader":"true","region":"na1"}); </script></span><!-- end HubSpot Call-to-Action Code --></span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-12 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-blog_subscribe " style="" data-widget-type="blog_subscribe" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_140598461636723416" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_blog_subscribe" style="" data-hs-cos-general-type="widget" data-hs-cos-type="blog_subscribe"><h3 id="hs_cos_wrapper_module_140598461636723416_title" class="hs_cos_wrapper form-title" data-hs-cos-general-type="widget_field" data-hs-cos-type="text">Suscríbete a nuestra Newsletter</h3>
+
+<div id="hs_form_target_module_140598461636723416_1926"></div>
+
+
+
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-13 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-post_filter " style="" data-widget-type="post_filter" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_1505835046162235" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_post_filter" style="" data-hs-cos-general-type="widget" data-hs-cos-type="post_filter"><div class="block">
+  <h3>Categorías</h3>
+  <div class="widget-module">
+    <ul>
+      
+        <li>
+          <a href="#/blog/tag/capacitación-laboral">capacitación laboral <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li>
+          <a href="#/blog/tag/carta-motivos">Carta motivos <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li>
+          <a href="#/blog/tag/derecho">Derecho <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li>
+          <a href="#/blog/tag/desarrollo-profesional">Desarrollo profesional <span class="filter-link-count" dir="ltr">(8)</span></a>
+        </li>
+      
+        <li>
+          <a href="#/blog/tag/educación-continua">Educación Continua <span class="filter-link-count" dir="ltr">(4)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/educación-profesional">Educación profesional <span class="filter-link-count" dir="ltr">(5)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/estudia-un-posgrado">Estudia un Posgrado <span class="filter-link-count" dir="ltr">(15)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/estudiar-en-el-extranjero">Estudiar en el extranjero <span class="filter-link-count" dir="ltr">(2)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/estudiar-en-méxico">Estudiar en México <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/gastronomía">Gastronomía <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/habilidades-blandas">Habilidades blandas <span class="filter-link-count" dir="ltr">(2)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/habilidades-directivas">Habilidades directivas <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/habilidades-gerenciales">Habilidades Gerenciales <span class="filter-link-count" dir="ltr">(2)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/innovación-y-emprendimiento">Innovación y Emprendimiento <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/internacional">Internacional <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/odontología">Odontología <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/posgrado">Posgrado <span class="filter-link-count" dir="ltr">(5)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/posgrado-anáhuac-mayab">Posgrado Anáhuac Mayab <span class="filter-link-count" dir="ltr">(20)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/posgrados">Posgrados <span class="filter-link-count" dir="ltr">(4)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/psicología-y-educación">Psicología y Educación <span class="filter-link-count" dir="ltr">(1)</span></a>
+        </li>
+      
+        <li style="display:none;">
+          <a href="#/blog/tag/vida-profesional">Vida Profesional <span class="filter-link-count" dir="ltr">(12)</span></a>
+        </li>
+      
+    </ul>
+    
+      <a class="filter-expand-link" href="#">Ver todas</a>
+    
+  </div>
+</div>
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-14 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-post_listing " style="" data-widget-type="post_listing" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_1505835014282216" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_post_listing" style="" data-hs-cos-general-type="widget" data-hs-cos-type="post_listing"><div class="block">
+  <h3>Últimas publicaciones</h3>
+  <div class="widget-module">
+    <ul class="hs-hash-1206332645-1699165643481">
+    </ul>
+  </div>
+</div>
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end body -->
+</div><!--end body wrapper -->
+
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_widget " style="" data-widget-type="global_widget" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_bolt_js" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html" data-global-widget-id="5293758555"><!-- Main.js : all custom js -->
+
+</span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_group footer" style="" data-widget-type="global_group" data-x="0" data-w="12">
+<div class="" data-global-widget-path="generated_global_groups/5304317390.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html social-links" style="" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_150161374197425" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html"><a href="https://www.facebook.com/posgradoanahuacmayab/" target="_blank"><img src="https://merida.anahuac.mx/hubfs/website/icn-facebook.png"></a>
+<a href="https://twitter.com/{{twitter}}" target="_blank"><img src="{{fotoTwitter}}}"></a>
+<a href="https://www.instagram.com/{{instagram}}/" target="_blank"><img src="{{img}}"></a></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_153661976046719" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-menu " style="" data-widget-type="menu" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_150161374988826" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_150161374988826" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="footer posgrado" data-menu-id="5327946363" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://posgrado.anahuacmayab.mx/capacitacion-y-convenios-empresariales" role="menuitem">Empresas</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="#/sedes" role="menuitem">Ubicaciones</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="#/intercambios" role="menuitem">Intercambios</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="#/beneficios-posgrado" role="menuitem">Beneficios</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="#/financiamiento" role="menuitem">Financiamiento</a></li>
+ </ul>
+</div></span></div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div>
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_group copyright" style="" data-widget-type="global_group" data-x="0" data-w="12">
+<div class="" data-global-widget-path="generated_global_groups/5304320343.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-raw_html " style="" data-widget-type="raw_html" data-x="0" data-w="12">
+<div class="cell-wrapper layout-widget-wrapper">
+<span id="hs_cos_wrapper_module_150162384739466" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_raw_html" style="" data-hs-cos-general-type="widget" data-hs-cos-type="raw_html">
+  <p>Teléfono: <a>{{tel or metadata.tele}}</a> con 5 líneas<br>{{direccion}}</p>
+<p>
+<a href="#site"><img src="https://merida.anahuac.mx/hubfs/Posgrado-y-Edu-blanco.png" alt="{{alt}}"></a>
+</p>
+<p>
+Miembro de</p>
+<a class="edx" href="{{url}}?utm_medium=partner-marketing&amp;utm_source=referral&amp;utm_campaign=anahuacx&amp;utm_content=web-institucional-pagina-institucional-ago2019-anahuac"><img src="https://merida.anahuac.mx/hubfs/edX_Logo_R_White_TranspLetters.png" style="max-height:50px;  max-width:100px; margin-bottom:0;" alt="Edx Logo"></a>
+<p>
+<a href="#SitioInstitucional">Sitio institucional</a>   |   <a href="#/aviso-de-privacidad">Aviso de privacidad</a>   |   <a href="#términos-y-condiciones-de-uso">Términos y condiciones de uso</a>
+</p></span>
+</div><!--end layout-widget-wrapper -->
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div>
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+    
+<!-- HubSpot performance collection script -->
+<script defer src="https://static.hsappstatic.net/content-cwv-embed/static-1.388/embed.js"></script>
+<script src="project.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'es-mx';
+</script>
+
+<script src="project.js"></script>
+
+    <!--[if lte IE 8]>
+    <script charset="utf-8" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+
+<script data-hs-allowed="true" src="v2.js"></script>
+
+  <script data-hs-allowed="true">
+      hbspt.forms.create({
+          portalId: '{{id}}',
+          formId: '{{id}}',
+          formInstanceId: '1926',
+          pageId: '5946242995',
+          region: 'na1',          
+          pageName: '{{title}}',
+                    contentType: 'blog-post',          
+          formsBaseUrl: '/_hcms/forms/',                    
+          inlineMessage: "Thanks for subscribing.",        
+          css: '',
+          target: '#hs_form_target_module_140598461636723416_1926',          
+          formData: {
+            cssClass: 'hs-form stacked'
+          }
+      });
+  </script>
+
+<script src="post_listing_asset.js"></script>
+<script>
+  function hsOnReadyPopulateListingFeed_1206332645_1699165643481() {
+    var options = {
+      'id': "{{id}}",
+      'listing_url': "/_hcms/postlisting?blogId=5328274591&maxLinks=5&listingType=recent&orderByViews=false&hs-expires=1730701643&hs-version=2&hs-signature=AJ2IBuFxB55Vu7I7vwNMFihUJ77fInz4aw",
+      'include_featured_image': false
+    };
+    window.hsPopulateListingFeed(options);
+  }
+
+  if (document.readyState === "complete" ||
+      (document.readyState !== "loading" && !document.documentElement.doScroll)
+  ) {
+    hsOnReadyPopulateListingFeed_1206332645_1699165643481();
+  } else {
+    document.addEventListener("DOMContentLoaded", hsOnReadyPopulateListingFeed_1206332645_1699165643481);
+  }
+</script>
+
+<script src="bolt.js"></script>
+
+{#-<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "blog-post"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/merida.anahuac.mx\/posgrado\/blog\/terapia-sistemica-familiar"]);
+_hsq.push(["setPageId", "5946242995"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 5946242995,
+    "legacyPageId": "5946242995",
+    "contentFolderId": null,
+    "contentGroupId": 5328274591,
+    "abTestId": null,
+    "languageVariantId": 5946242995,
+    "languageCode": "es-mx",
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="3416190.js"></script>
+<!-- End of HubSpot Analytics Code -->#}
+
+
+{#-<script type="text/javascript">
+var hsVars = {
+    render_id: "16d67228-5d43-4fe9-8746-49a97b6dcd09",
+    ticks: 1699165643399,
+    page_id: 5946242995,
+    
+    content_group_id: 5328274591,
+    portal_id: 3416190,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "es-mx",
+    analytics_page_type: "blog-post",
+    analytics_page_id: "5946242995",
+    category_id: 3,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>#}
+
+<script defer src="index.js"></script>
+
+<div id="fb-root"></div>
+ <script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/es_ES/all.js#xfbml=1&status=0";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+ <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+<!-- Generated by the HubSpot Template Builder - template version 1.03 -->
+</body></html>

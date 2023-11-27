@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Bento style</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<d class="dashboard">
+	<div class="profile">
+		<h2>Good Morning Champ!</h2>
+		<p>Time to seize the day</p>
+	</div>
+
+	<div class="schedule-table">
+		<h2>Weekly Schedule</h2>
+		<ul class="schedule_list">
+			<li class="schedule_item">
+				<p class="schedule_day">Mon</p>
+				<div class="schedule_container">					
+					<span class="material-symbols-rounded" aria-label="Running">
+directions_run</span>
+					<p>6:00</p>
+				</div>
+			</li>
+			<li class="schedule_item">
+				<p class="schedule_day">Tue</p>
+				<div class="schedule_container">					
+					<span class="material-symbols-rounded" aria-label="Swimming">pool</span>
+					<p>7:00</p>
+				</div>
+			</li>
+			<li class="schedule_item">
+				<p class="schedule_day">Wed</p>
+				<div class="schedule_container">					
+					<span class="material-symbols-rounded" aria-label="Cycling">
+directions_bike
+</span>
+					<p>6:30</p>
+				</div>
+			</li>
+			<li class="schedule_item">
+				<p class="schedule_day">Thu</p>
+				<div class="schedule_container">					
+					<span class="material-symbols-rounded" aria-label="yoga">
+self_improvement</span>
+					<p>6:00</p>
+				</div>
+			</li>
+			<li class="schedule_item">
+				<p class="schedule_day">Fri</p>
+				<div class="schedule_container"> 					
+					<span class="material-symbols-rounded" aria-label="Weight Training">fitness_center</span>
+					<p>8:00</p>
+				</div>
+			</li>		
+	</div>
+
+	<div class="exercise-table">
+		<h2>Last Exercises</h2>
+		<ul class="exercise_list">
+			<li class="exercise_item">
+				<div class="video_wrapper">
+					<video muted="muted" aria-label="man running outdoors">
+						<source src="https://cdn.coverr.co/videos/coverr-jogging-outdoors-7378/1080p.mp4" type="video/mp4">	
+					Seu navegador não suporta o elemento de vídeo.
+					</video>
+					<p>Running</p>
+					<span>30 min</span>
+				</div>
+			</li>
+			
+			<li class="exercise_item">
+				<div class="video_wrapper">
+					<video muted="muted" aria-label="a person riding a bicycle">		
+						<source src="https://www.shutterstock.com/shutterstock/videos/1058108644/preview/stock-footage-triathlete-cyclist-training-on-bicycle-fit-athlete-workout-training-cycling-triathlon-competition.webm" type="video/mp4">						Seu navegador não suporta o elemento de vídeo.
+					</video>
+					<p>Cycling</p>
+					<span>60 min</span>
+				</div>
+			</li>
+			<li class="exercise_item">
+				<div class="video_wrapper">
+					<video muted="muted" aria-label="Girl doing the warrior yoga pose on the lawn">
+						<source src="https://cdn.coverr.co/videos/coverr-girl-doing-the-warrior-i-yoga-pose-on-the-lawn-7972/1080p.mp4" type="video/mp4">
+						Seu navegador não suporta o elemento de vídeo.
+					</video>
+					<p>Yoga</p>
+					<span>40 min</span>
+				</div>
+			</li>
+			<li class="exercise_item">
+				<div class="video_wrapper">
+					<video muted="muted" aria-label="Girl doing push ups on a bench">
+						<source src="https://cdn.coverr.co/videos/coverr-doing-push-ups-on-a-bench-5106/1080p.mp4" type="video/mp4">	
+						Seu navegador não suporta o elemento de vídeo.
+					</video>
+					<p>Weight Training</p>
+					<span>50 min</span>
+				</div>
+			</li>	
+			<li class="exercise_item">
+				<div class="video_wrapper">
+					<video muted="muted" aria-label="Timelapse surfing">
+						<source src="https://cdn.coverr.co/videos/coverr-timelapse-surfing-2716/1080p.mp4" type="video/mp4">	
+						Seu navegador não suporta o elemento de vídeo.
+					</video>
+					<p>Surfing</p>
+					<span>60 min</span>
+				</div>
+			</li>
+			<li class="exercise_item">
+				<div class="video_wrapper">
+					<video muted="muted" aria-label="Man punching the air">
+						<source src="https://cdn.coverr.co/videos/coverr-man-punching-the-air-5780/1080p.mp4" type="video/mp4">	
+						Seu navegador não suporta o elemento de vídeo.
+					</video>
+					<p>Boxing</p>
+					<span>60 min</span>
+				</div>
+			</li>
+			<li class="exercise_item">
+				<div class="video_wrapper">
+					<video muted="muted" aria-label="swimming athlete training">
+						<source src="https://www.shutterstock.com/shutterstock/videos/1041554251/preview/stock-footage-a-professional-swimmer-raising-a-lot-of-splashes-is-swimming-in-butterfly-style-along-his-path-in.webm" type="video/mp4">
+					Seu navegador não suporta o elemento de vídeo.						
+					</video>
+					<p>Swimming</p>
+					<span>45 min</span>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="calories">
+		<h2>Active Calories</h2>		
+		<div class="calories_wrapper">
+			<p class="calories_time">Today Goal</p>			
+			<p class="calories_goal">500 cal</p>
+			<div class="graphic_container">
+				<div class="today--1"></div>
+				<div class="today--2"></div>
+				<div class="today--3"></div>
+				<div class="today--4"></div>
+				<div class="today--5"></div>
+			</div>
+		</div>
+		<div class="calories_wrapper">
+			<p class="calories_time">This Week Goal</p>					
+			<p class="calories_goal">3500 cal</p>
+			<div class="graphic_container">
+				<div class="week--1"></div>
+				<div class="week--2"></div>
+				<div class="week--3"></div>
+				<div class="week--4"></div>
+				<div class="week--5"></div>
+			</div>
+		</div>
+		<div class="calories_wrapper">
+			<p class="calories_time">This Month Goal</p>						
+			<p class="calories_goal">14000 cal</p>
+			<div class="graphic_container">
+				<div class="month--1"></div>
+				<div class="month--2"></div>
+				<div class="month--3"></div>
+				<div class="month--4"></div>
+				<div class="month--5"></div>
+			</div>
+		</div>		
+	</div>
+
+	<div class="personal-bests">
+		<div class="personal-bests_wrapper">
+					
+			<img src="data:image/png;base64,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" alt="A man holding a trophy">
+			<h2>Personal Bests</h2>
+		</div>
+		<ul class="bests_list">
+			<li>
+				<p class="best_title">Fastest 5K Run</p> 
+				<p class="best">22 min</p>					
+			</li>
+			<li>
+				<p class="best_title">Heaviest Deadlift</p>
+				<p class="best">250 lbs</p>					
+			</li>
+			<li>
+				<p class="best_title">Longest Plank</p>
+				<p class="best">3 min</p>					
+			</li>
+		</ul>
+		
+	</div>
+
+	<div class="challenges">
+		<h2>Challenges</h2>
+		
+		<ul>
+			<li>30-Day Running Streak</li>
+			<li>1000 Pushups in a Month</li>
+			<li>Swim 20km in a Month</li>
+
+		</ul>
+	</div>
+
+	<div class="activity-feed">
+		<h2>Friends Activity</h2>
+		<ul class="feed_list">
+			<li>
+				<img src="https://images.pexels.com/photos/3764119/pexels-photo-3764119.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Jane's perfil photo">
+				<p class="feed_name">Jane</p>
+				<p class="feed_text">Just set a new record in cycling: 30 miles!</p>				
+			</li>
+			<li>
+				<img src="https://images.pexels.com/photos/4628295/pexels-photo-4628295.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Mike's perfil photo">
+				<p class="feed_name">Mike</p> 
+				<p class="feed_text">Completed the 30-Day Running Streak Challenge!</p>					
+			</li>
+			<li>
+				<img src="https://images.pexels.com/photos/2078111/pexels-photo-2078111.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Anna's perfil photo">
+				<p class="feed_name">Anna</p>
+				<p class="feed_text">Shared a new workout: 'Hill Sprints Interval'.</p>					
+			</li>
+		</ul>
+	</div>
+		<ul class="credit_list">
+			<li><a href="https://coverr.co/"><span class="material-symbols-rounded">videocam</span> by coverr</a></li>
+			<li><a href="https://www.pexels.com/"><span class="material-symbols-rounded">photo_camera</span> by pexels</a></li>
+			<li><a href="https://icons8.com"><span class="material-symbols-rounded">palette</span>by icons8</a></li>
+			
+		</ul>
+</div>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
