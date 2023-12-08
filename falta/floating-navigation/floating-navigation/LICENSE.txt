@@ -1,7 +1,7 @@
 The MIT License (MIT)
 
-Copyright (c) 2023 Dark (https://codepen.io/Darkbbeider/pen/yLZPrpY)
-Fork of an original work Merry Christmas - Nordic Star Red Sweater (https://codepen.io/Darkbbeider/pen/yLZPrpY)
+Copyright (c) 2023 Dark (https://codepen.io/Darkbbeider/pen/KKBpXbd)
+Fork of an original work Floating Navigation (https://codepen.io/Darkbbeider/pen/KKBpXbd)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
