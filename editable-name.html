@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="robots" content="max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <title>Editable</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css?family=Nunito&display=swap");
+
+    html,
+    body {
+      margin: 0px;
+      position: relative;
+      font-family: "Nunito", sans-serif;
+    }
+
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .greet {
+      font-weight: bold;
+      text-align: center;
+      box-sizing: border-box;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      text-transform: uppercase;
+      z-index: 100;
+    }
+
+    #canvasHidden {
+      display: none;
+    }
+
+    #canvas {
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: -1;
+    }
+  </style>
+</head>
+
+<body>
+  <canvas id="canvasHidden"></canvas>
+  <canvas id="canvas"></canvas>
+  <div class="container">
+    <div class="greet" id="greet" contenteditable="true">luis angel</div>
+  </div>
+
+  <script>
+    let width;
+    let height;
+
+    const range = x =>
+      Array(x)
+        .fill(0)
+        .map((_, index) => index);
+
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+
+    const canvasSub = document.getElementById("canvasHidden");
+    const ctxSub = canvasSub.getContext("2d");
+
+    const init = () => {
+      const { innerWidth, innerHeight } = window;
+      width = innerWidth;
+      height = innerHeight;
+      canvas.width = width;
+      canvas.height = height;
+      canvasSub.width = width;
+      canvasSub.height = height;
+
+      ctx.beginPath();
+      ctx.rect(0, 0, innerWidth, innerHeight);
+      ctx.fillStyle = "#f8f2e2";
+      ctx.fill();
+
+      ctxSub.beginPath();
+      ctxSub.rect(0, 0, innerWidth, innerHeight);
+      ctxSub.fillStyle = "#f8f2e2";
+      ctxSub.fill();
+
+      const numLines = 120;
+
+      range(numLines).forEach(i => {
+        ctx.beginPath();
+        ctx.moveTo(innerWidth * (1 / numLines) * i, 0);
+        ctx.lineTo(innerWidth * (1 / numLines) * i, innerHeight);
+        ctx.lineWidth = innerWidth / (numLines * 3);
+        ctx.strokeStyle = "#15100caa";
+        ctx.stroke();
+        ctx.closePath();
+
+        ctxSub.beginPath();
+        ctxSub.moveTo(0, innerWidth * (1 / numLines) * i);
+        ctxSub.lineTo(innerWidth, innerWidth * (1 / numLines) * i);
+        ctxSub.lineWidth = innerWidth / (numLines * 3);
+        ctxSub.strokeStyle = "#15100caa";
+        ctxSub.stroke();
+        ctxSub.closePath();
+      });
+
+      var data = canvasSub.toDataURL();
+      var element = document.getElementById("greet");
+      element.style.backgroundImage = "url(" + data + ")";
+      element.style.fontSize = `${Math.min(width, height) * 0.25}px`;
+    };
+
+    window.addEventListener("resize", init);
+    init();
+
+    // Load content from localStorage
+    window.addEventListener("load", () => {
+      const greetElement = document.getElementById("greet");
+      const savedContent = localStorage.getItem("greetContent");
+      if (savedContent) {
+        greetElement.textContent = savedContent;
+      }
+    });
+
+    // Save content to localStorage on input
+    document.getElementById("greet").addEventListener("input", () => {
+      const greetElement = document.getElementById("greet");
+      localStorage.setItem("greetContent", greetElement.textContent);
+    });
+  </script>
+</body>
+
+</html>
